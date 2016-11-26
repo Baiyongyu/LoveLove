@@ -12,6 +12,7 @@
 
 @interface MyLoveViewController : ComBaseViewController
 @property (nonatomic, assign)int index;
+@property (nonatomic, copy) NSString *titles;
 @end
 
 @interface MyCell : UITableViewCell
@@ -25,6 +26,8 @@
 @property (nonatomic, strong) UIView *coverview;
 /** cell的位移 */
 - (CGFloat)cellOffset;
+
+- (void)ShowImage:(NSString *)models nameNV:(NSString *)nameNV;
 
 @property (nonatomic, strong) AppModel *appModel;
 

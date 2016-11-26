@@ -26,14 +26,14 @@
                                nil];
     
     NSArray *titleArray = [NSArray arrayWithObjects:
+                           @"夏茉",
                            @"刘飞儿",
-                           @"苍井空",
-                           @"波多野结衣",
-                           @"亚里沙",
-                           @"饭岛爱",
-                           @"爱池有沙",
-                           @"泷泽萝拉",
-                           @"小泽玛利亚",
+                           @"没想好",
+                           @"待定",
+                           @"不要着急",
+                           @"思考中",
+                           @"快了",
+                           @"嘿嘿",
                            nil];
     
     self.photoView.image = [UIImage imageNamed:imageNameArray[indexpath.row]];

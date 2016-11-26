@@ -40,7 +40,7 @@
 - (void)layoutConstraints {
     
     // 背景视图
-    self.bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 248)];
+    self.bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 258)];
     self.bgView.backgroundColor = kDefaultViewBackgroundColor;
     [self.contentView addSubview:self.bgView];
     
@@ -90,7 +90,6 @@
     [self.view addSubview:topButton];
 }
 
-
 #pragma mark - collectionView delegate
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return 8;
@@ -105,14 +104,16 @@
     switch (indexPath.row) {
         case 0:
         {
-            WaterLayoutViewController *waterVC = [[WaterLayoutViewController alloc] init];
-            waterVC.title = @"刘飞儿";
+            WaterLayoutViewController *waterVC = [[WaterLayoutViewController alloc] initWithItemSelectType:ItemSelectTypeOne];
+            waterVC.titles = @"夏茉";
             [self.navigationController pushViewController:waterVC animated:YES];
         }
             break;
         case 1:
         {
-            [MBProgressHUD showTip:@"暂未开放、敬请期待！"];
+            WaterLayoutViewController *waterVC = [[WaterLayoutViewController alloc] initWithItemSelectType:ItemSelectTypeTwo];
+            waterVC.titles = @"刘飞儿";
+            [self.navigationController pushViewController:waterVC animated:YES];
         }
         break;
         case 2:

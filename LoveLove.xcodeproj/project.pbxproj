@@ -28,6 +28,29 @@
 		F35FE5601DE92C6100766944 /* WaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE55B1DE92C6000766944 /* WaterfallLayout.m */; };
 		F35FE5631DE92CB800766944 /* WaterLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE5621DE92CB800766944 /* WaterLayoutViewController.m */; };
 		F35FE56C1DE95E6600766944 /* ToViewTopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE56B1DE95E6600766944 /* ToViewTopButton.m */; };
+		F35FE5701DE9717E00766944 /* WaterList2.plist in Resources */ = {isa = PBXBuildFile; fileRef = F35FE56F1DE9717E00766944 /* WaterList2.plist */; };
+		F35FE5871DE976B000766944 /* p1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE5731DE976B000766944 /* p1.jpg */; };
+		F35FE5881DE976B000766944 /* p10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE5741DE976B000766944 /* p10.jpg */; };
+		F35FE5891DE976B000766944 /* p11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE5751DE976B000766944 /* p11.jpg */; };
+		F35FE58A1DE976B100766944 /* p12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE5761DE976B000766944 /* p12.jpg */; };
+		F35FE58B1DE976B100766944 /* p13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE5771DE976B000766944 /* p13.jpg */; };
+		F35FE58C1DE976B100766944 /* p14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE5781DE976B000766944 /* p14.jpg */; };
+		F35FE58D1DE976B100766944 /* p15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE5791DE976B000766944 /* p15.jpg */; };
+		F35FE58E1DE976B100766944 /* p16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE57A1DE976B000766944 /* p16.jpg */; };
+		F35FE58F1DE976B100766944 /* p17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE57B1DE976B000766944 /* p17.jpg */; };
+		F35FE5901DE976B100766944 /* p18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE57C1DE976B000766944 /* p18.jpg */; };
+		F35FE5911DE976B100766944 /* p19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE57D1DE976B000766944 /* p19.jpg */; };
+		F35FE5921DE976B100766944 /* p2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE57E1DE976B000766944 /* p2.jpg */; };
+		F35FE5931DE976B100766944 /* p20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE57F1DE976B000766944 /* p20.jpg */; };
+		F35FE5941DE976B100766944 /* p3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE5801DE976B000766944 /* p3.jpg */; };
+		F35FE5951DE976B100766944 /* p4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE5811DE976B000766944 /* p4.jpg */; };
+		F35FE5961DE976B100766944 /* p5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE5821DE976B000766944 /* p5.jpg */; };
+		F35FE5971DE976B100766944 /* p6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE5831DE976B000766944 /* p6.jpg */; };
+		F35FE5981DE976B100766944 /* p7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE5841DE976B000766944 /* p7.jpg */; };
+		F35FE5991DE976B100766944 /* p8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE5851DE976B000766944 /* p8.jpg */; };
+		F35FE59A1DE976B100766944 /* p9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE5861DE976B000766944 /* p9.jpg */; };
+		F35FE59D1DE9895800766944 /* ComWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE59C1DE9895800766944 /* ComWebViewController.m */; };
+		F35FE5A01DE989AB00766944 /* WebDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE59F1DE989AB00766944 /* WebDetailsViewController.m */; };
 		F37E077E1DE85F0D00845118 /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E077D1DE85F0D00845118 /* UIAlertController+Blocks.m */; };
 		F37E07911DE8673E00845118 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E07841DE8673E00845118 /* TAAbstractDotView.m */; };
 		F37E07921DE8673E00845118 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E07861DE8673E00845118 /* TAAnimatedDotView.m */; };
@@ -95,6 +118,31 @@
 		F35FE5621DE92CB800766944 /* WaterLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterLayoutViewController.m; sourceTree = "<group>"; };
 		F35FE56A1DE95E6600766944 /* ToViewTopButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToViewTopButton.h; sourceTree = "<group>"; };
 		F35FE56B1DE95E6600766944 /* ToViewTopButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToViewTopButton.m; sourceTree = "<group>"; };
+		F35FE56F1DE9717E00766944 /* WaterList2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WaterList2.plist; sourceTree = "<group>"; };
+		F35FE5731DE976B000766944 /* p1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p1.jpg; sourceTree = "<group>"; };
+		F35FE5741DE976B000766944 /* p10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p10.jpg; sourceTree = "<group>"; };
+		F35FE5751DE976B000766944 /* p11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p11.jpg; sourceTree = "<group>"; };
+		F35FE5761DE976B000766944 /* p12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p12.jpg; sourceTree = "<group>"; };
+		F35FE5771DE976B000766944 /* p13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p13.jpg; sourceTree = "<group>"; };
+		F35FE5781DE976B000766944 /* p14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p14.jpg; sourceTree = "<group>"; };
+		F35FE5791DE976B000766944 /* p15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p15.jpg; sourceTree = "<group>"; };
+		F35FE57A1DE976B000766944 /* p16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p16.jpg; sourceTree = "<group>"; };
+		F35FE57B1DE976B000766944 /* p17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p17.jpg; sourceTree = "<group>"; };
+		F35FE57C1DE976B000766944 /* p18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p18.jpg; sourceTree = "<group>"; };
+		F35FE57D1DE976B000766944 /* p19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p19.jpg; sourceTree = "<group>"; };
+		F35FE57E1DE976B000766944 /* p2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p2.jpg; sourceTree = "<group>"; };
+		F35FE57F1DE976B000766944 /* p20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p20.jpg; sourceTree = "<group>"; };
+		F35FE5801DE976B000766944 /* p3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p3.jpg; sourceTree = "<group>"; };
+		F35FE5811DE976B000766944 /* p4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p4.jpg; sourceTree = "<group>"; };
+		F35FE5821DE976B000766944 /* p5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p5.jpg; sourceTree = "<group>"; };
+		F35FE5831DE976B000766944 /* p6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p6.jpg; sourceTree = "<group>"; };
+		F35FE5841DE976B000766944 /* p7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p7.jpg; sourceTree = "<group>"; };
+		F35FE5851DE976B000766944 /* p8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p8.jpg; sourceTree = "<group>"; };
+		F35FE5861DE976B000766944 /* p9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p9.jpg; sourceTree = "<group>"; };
+		F35FE59B1DE9895800766944 /* ComWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComWebViewController.h; sourceTree = "<group>"; };
+		F35FE59C1DE9895800766944 /* ComWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComWebViewController.m; sourceTree = "<group>"; };
+		F35FE59E1DE989AB00766944 /* WebDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebDetailsViewController.h; sourceTree = "<group>"; };
+		F35FE59F1DE989AB00766944 /* WebDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebDetailsViewController.m; sourceTree = "<group>"; };
 		F37E077C1DE85F0D00845118 /* UIAlertController+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Blocks.h"; sourceTree = "<group>"; };
 		F37E077D1DE85F0D00845118 /* UIAlertController+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks.m"; sourceTree = "<group>"; };
 		F37E07831DE8673E00845118 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
@@ -199,8 +247,44 @@
 				F35FE55A1DE92C6000766944 /* WaterfallLayout.h */,
 				F35FE55B1DE92C6000766944 /* WaterfallLayout.m */,
 				F35FE5541DE92C6000766944 /* WaterList1.plist */,
+				F35FE56F1DE9717E00766944 /* WaterList2.plist */,
 			);
 			path = WaterLayout;
+			sourceTree = "<group>";
+		};
+		F35FE5711DE976B000766944 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F35FE5721DE976B000766944 /* xiamo */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F35FE5721DE976B000766944 /* xiamo */ = {
+			isa = PBXGroup;
+			children = (
+				F35FE5731DE976B000766944 /* p1.jpg */,
+				F35FE5741DE976B000766944 /* p10.jpg */,
+				F35FE5751DE976B000766944 /* p11.jpg */,
+				F35FE5761DE976B000766944 /* p12.jpg */,
+				F35FE5771DE976B000766944 /* p13.jpg */,
+				F35FE5781DE976B000766944 /* p14.jpg */,
+				F35FE5791DE976B000766944 /* p15.jpg */,
+				F35FE57A1DE976B000766944 /* p16.jpg */,
+				F35FE57B1DE976B000766944 /* p17.jpg */,
+				F35FE57C1DE976B000766944 /* p18.jpg */,
+				F35FE57D1DE976B000766944 /* p19.jpg */,
+				F35FE57E1DE976B000766944 /* p2.jpg */,
+				F35FE57F1DE976B000766944 /* p20.jpg */,
+				F35FE5801DE976B000766944 /* p3.jpg */,
+				F35FE5811DE976B000766944 /* p4.jpg */,
+				F35FE5821DE976B000766944 /* p5.jpg */,
+				F35FE5831DE976B000766944 /* p6.jpg */,
+				F35FE5841DE976B000766944 /* p7.jpg */,
+				F35FE5851DE976B000766944 /* p8.jpg */,
+				F35FE5861DE976B000766944 /* p9.jpg */,
+			);
+			path = xiamo;
 			sourceTree = "<group>";
 		};
 		F37E07811DE8673E00845118 /* SDCycleScrollView */ = {
@@ -275,6 +359,7 @@
 				F39265F41DE7D3B50064B8B2 /* AppDelegate.h */,
 				F39265F51DE7D3B50064B8B2 /* AppDelegate.m */,
 				F39266AA1DE820410064B8B2 /* Model.db */,
+				F35FE5711DE976B000766944 /* Resources */,
 				F39266421DE7E8A70064B8B2 /* Modules */,
 				F39266A21DE811CF0064B8B2 /* Components */,
 				F392663A1DE7E8A70064B8B2 /* Categories */,
@@ -353,6 +438,8 @@
 		F39266431DE7E8A70064B8B2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				F35FE59B1DE9895800766944 /* ComWebViewController.h */,
+				F35FE59C1DE9895800766944 /* ComWebViewController.m */,
 				F35FE52B1DE91A3000766944 /* ComBaseTableViewController.h */,
 				F35FE52C1DE91A3000766944 /* ComBaseTableViewController.m */,
 				F39266441DE7E8A70064B8B2 /* ComBaseViewController.h */,
@@ -381,6 +468,8 @@
 				F392664F1DE7E8A70064B8B2 /* HomeViewController.m */,
 				F39266A71DE815EA0064B8B2 /* MyLoveViewController.h */,
 				F39266A81DE815EA0064B8B2 /* MyLoveViewController.m */,
+				F35FE59E1DE989AB00766944 /* WebDetailsViewController.h */,
+				F35FE59F1DE989AB00766944 /* WebDetailsViewController.m */,
 				F35FE5531DE92C6000766944 /* WaterLayout */,
 				F37E07991DE87F3C00845118 /* Header */,
 				F37E07981DE87F3C00845118 /* Footer */,
@@ -442,7 +531,7 @@
 				TargetAttributes = {
 					F39265ED1DE7D3B50064B8B2 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = KK59AKUJZC;
+						DevelopmentTeam = Q5SWE3562A;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -470,15 +559,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F35FE5961DE976B100766944 /* p5.jpg in Resources */,
+				F35FE5951DE976B100766944 /* p4.jpg in Resources */,
+				F35FE5911DE976B100766944 /* p19.jpg in Resources */,
+				F35FE58D1DE976B100766944 /* p15.jpg in Resources */,
 				F35FE5371DE91ABF00766944 /* sr_refresh@2X.png in Resources */,
 				F39266011DE7D3B50064B8B2 /* LaunchScreen.storyboard in Resources */,
 				F35FE52A1DE9156500766944 /* QMNavigateCollectionViewCell.xib in Resources */,
+				F35FE5881DE976B000766944 /* p10.jpg in Resources */,
+				F35FE5981DE976B100766944 /* p7.jpg in Resources */,
+				F35FE5871DE976B000766944 /* p1.jpg in Resources */,
+				F35FE59A1DE976B100766944 /* p9.jpg in Resources */,
 				F39265FE1DE7D3B50064B8B2 /* Assets.xcassets in Resources */,
 				F35FE5361DE91ABF00766944 /* sr_refresh.png in Resources */,
+				F35FE58A1DE976B100766944 /* p12.jpg in Resources */,
+				F35FE58E1DE976B100766944 /* p16.jpg in Resources */,
+				F35FE5921DE976B100766944 /* p2.jpg in Resources */,
 				F39266AB1DE820410064B8B2 /* Model.db in Resources */,
+				F35FE58B1DE976B100766944 /* p13.jpg in Resources */,
+				F35FE5971DE976B100766944 /* p6.jpg in Resources */,
 				F39265FC1DE7D3B50064B8B2 /* Main.storyboard in Resources */,
+				F35FE58C1DE976B100766944 /* p14.jpg in Resources */,
+				F35FE5941DE976B100766944 /* p3.jpg in Resources */,
+				F35FE5931DE976B100766944 /* p20.jpg in Resources */,
+				F35FE5701DE9717E00766944 /* WaterList2.plist in Resources */,
 				F35FE55C1DE92C6000766944 /* WaterList1.plist in Resources */,
+				F35FE5891DE976B000766944 /* p11.jpg in Resources */,
 				F35FE55F1DE92C6100766944 /* WaterCollectionViewCell.xib in Resources */,
+				F35FE58F1DE976B100766944 /* p17.jpg in Resources */,
+				F35FE5901DE976B100766944 /* p18.jpg in Resources */,
+				F35FE5991DE976B100766944 /* p8.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +667,7 @@
 				F392665F1DE7E8E00064B8B2 /* FMDBManagers.m in Sources */,
 				F37E07951DE8673E00845118 /* SDCollectionViewCell.m in Sources */,
 				F35FE5601DE92C6100766944 /* WaterfallLayout.m in Sources */,
+				F35FE5A01DE989AB00766944 /* WebDetailsViewController.m in Sources */,
 				F35FE55D1DE92C6000766944 /* HomeWaterImage.m in Sources */,
 				F39265F31DE7D3B50064B8B2 /* main.m in Sources */,
 				F35FE5381DE91ABF00766944 /* SRRefreshView.m in Sources */,
@@ -568,6 +679,7 @@
 				F37E07911DE8673E00845118 /* TAAbstractDotView.m in Sources */,
 				F35FE54E1DE91D7100766944 /* MemoryTimeModel.m in Sources */,
 				F37E07961DE8673E00845118 /* SDCycleScrollView.m in Sources */,
+				F35FE59D1DE9895800766944 /* ComWebViewController.m in Sources */,
 				F39266A91DE815EA0064B8B2 /* MyLoveViewController.m in Sources */,
 				F392665E1DE7E8E00064B8B2 /* AppModel.m in Sources */,
 				F39266561DE7E8A70064B8B2 /* ComNavigationController.m in Sources */,
@@ -691,9 +803,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = KK59AKUJZC;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Q5SWE3562A;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = LoveLove/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianmo.LoveLove;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -706,9 +821,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = KK59AKUJZC;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Q5SWE3562A;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = LoveLove/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianmo.LoveLove;
 				PRODUCT_NAME = "$(TARGET_NAME)";

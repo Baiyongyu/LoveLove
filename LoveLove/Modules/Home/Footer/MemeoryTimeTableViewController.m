@@ -38,7 +38,7 @@
     
     UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - 80)/2, 10, SCREEN_WIDTH - 80, headerView.height)];
     imgView.image = [UIImage imageNamed:@"guide_male_title"];
-    imgView.center = CGPointMake(SCREEN_WIDTH/2, 25);
+    imgView.center = CGPointMake(SCREEN_WIDTH/2, 28);
     [headerView addSubview:imgView];
     
     return headerView;

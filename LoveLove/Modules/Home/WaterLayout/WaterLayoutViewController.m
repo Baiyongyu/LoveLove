@@ -17,14 +17,23 @@
 @interface WaterLayoutViewController () <UICollectionViewDataSource,UICollectionViewDelegate,WaterfallLayoutDelegate>
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray<HomeWaterImage *> *images;
+@property (nonatomic, assign) ItemSelectType ItemSelectType;
+
 @end
 
 @implementation WaterLayoutViewController
 
+- (instancetype)initWithItemSelectType:(ItemSelectType)itemSelectType {
+    if (self = [super init]) {
+        _ItemSelectType = itemSelectType;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.titleLabel.text = self.title;
+    self.titleLabel.text = self.titles;
     self.leftBtn.hidden = NO;
 }
 
@@ -80,15 +89,18 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     MyLoveViewController *loveVC = [[MyLoveViewController alloc] init];
     loveVC.index = (int)indexPath.row + 1;
+    loveVC.titles = self.titles;
     [self.navigationController pushViewController:loveVC animated:YES];
 }
-
 
 - (NSMutableArray *)images {
     //从plist文件中取出字典数组，并封装成对象模型，存入模型数组中
     if (!_images) {
         _images = [NSMutableArray array];
         NSString *path = [[NSBundle mainBundle] pathForResource:@"WaterList1.plist" ofType:nil];
+        
+//        NSString *path = [NSString stringWithFormat:@"%@p.png"];
+        
         NSArray *imageDics = [NSArray arrayWithContentsOfFile:path];
         for (NSDictionary *imageDic in imageDics) {
             HomeWaterImage *image = [HomeWaterImage imageWithImageDic:imageDic];
@@ -97,7 +109,6 @@
     }
     return _images;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -8,12 +8,13 @@
 
 #import "MyLoveViewController.h"
 #import "FMDBManagers.h"
-#import "AppModel.h"
+#import "WebDetailsViewController.h"
 #define cellHeight 250
 
 @interface MyLoveViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) NSMutableArray *dataSource;
+@property (nonatomic,strong) NSArray *array;
 @end
 
 @implementation MyLoveViewController
@@ -22,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.titleLabel.text = @"My Love";
+    self.titleLabel.text = self.titles;
     self.leftBtn.hidden = NO;
 }
 
@@ -37,10 +38,16 @@
 }
 
 - (void)loadData {
-    NSArray *array = [FMDBManagers getAllModel:[NSString stringWithFormat:@"xiamo%d",self.index]];
-    for (AppModel *model in array) {
+    
+    if ([self.titles isEqualToString:@"夏茉"]) {
+        self.array = [FMDBManagers getAllModel:[NSString stringWithFormat:@"xiamo%d",self.index]];
+        
+    }else if ([self.titles isEqualToString:@"刘飞儿"]) {
+        self.array = [FMDBManagers getAllModel:[NSString stringWithFormat:@"liufeier%d",self.index]];
+    }
+    
+    for (AppModel *model in self.array) {
         [self.dataSource addObject:model];
-//        NSLog(@"%@",self.dataSource);
         NSLog(@"%@",model.image);
     }
 }
@@ -53,18 +60,24 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MyCell * cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
     if (cell == nil) {
-        cell = [[MyCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"myCell"];
+        cell = [[MyCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"myCell"];
     }
+    AppModel *model = self.dataSource[indexPath.row];
+    
+    [cell ShowImage:model.image nameNV:[NSString stringWithFormat:@"p%d.jpg",self.index]];
+    
     return cell;
 }
 
 // 在willDisplayCell里面处理数据能优化tableview的滑动流畅性
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    MyCell * myCell = (MyCell *)cell;
-    
-    myCell.appModel = self.dataSource[indexPath.row];
-    [myCell cellOffset];
-}
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+//    MyCell * myCell = (MyCell *)cell;
+//    
+//    myCell.appModel = self.dataSource[indexPath.row];
+//    
+//    [myCell ShowImage:myCell.appModel.image nameNV:[NSString stringWithFormat:@"p%d.jpg",self.index]];
+//    [myCell cellOffset];
+//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return cellHeight;
@@ -73,16 +86,23 @@
     return cellHeight;
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    // visibleCells 获取界面上能显示出来了cell
-    NSArray<MyCell *> *array = [self.tableView visibleCells];
-    
-    //enumerateObjectsUsingBlock 类似于for，但是比for更快
-    [array enumerateObjectsUsingBlock:^(MyCell * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
-        [obj cellOffset];
-    }];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    WebDetailsViewController *detailsVC = [[WebDetailsViewController alloc] init];
+    AppModel *model = self.dataSource[indexPath.row];
+    detailsVC.urlStr = model.image;
+    [self.navigationController pushViewController:detailsVC animated:YES];
 }
+
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//    // visibleCells 获取界面上能显示出来了cell
+//    NSArray<MyCell *> *array = [self.tableView visibleCells];
+//    
+//    //enumerateObjectsUsingBlock 类似于for，但是比for更快
+//    [array enumerateObjectsUsingBlock:^(MyCell * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        
+//        [obj cellOffset];
+//    }];
+//}
 
 
 - (NSMutableArray *)dataSource {
@@ -112,8 +132,9 @@
         
         //pictureView的Y往上加一半cellHeight 高度为2 * cellHeight，这样上下多出一半的cellHeight
         _pictureView = ({
-            UIImageView * picture = [[UIImageView alloc]initWithFrame:CGRectMake(0, -cellHeight/2, SCREEN_WIDTH, cellHeight * 2)];
-            picture.contentMode = UIViewContentModeScaleAspectFill;
+//            UIImageView * picture = [[UIImageView alloc]initWithFrame:CGRectMake(0, -cellHeight/2, SCREEN_WIDTH, cellHeight * 2)];
+            UIImageView * picture = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, cellHeight)];
+            picture.contentMode = UIViewContentModeScaleToFill;
             picture;
         });
         [self.contentView  addSubview:_pictureView];
@@ -175,10 +196,8 @@
     return offset;
 }
 
-- (void)setAppModel:(AppModel *)appModel {
-    _appModel = appModel;
-//    [self.pictureView setImageWithURLString:appModel.image placeholderImage:[UIImage imageNamed:@"zhanweitu.jpg"]];
-    [self.pictureView sd_setImageWithURL:[NSURL URLWithString:appModel.image] placeholderImage:[UIImage imageNamed:@"zhanweitu.jpg"]];
+- (void)ShowImage:(NSString *)models nameNV:(NSString *)nameNV {
+    [self.pictureView sd_setImageWithURL:[NSURL URLWithString:models] placeholderImage:[UIImage imageNamed:nameNV]];
 }
 
 @end
