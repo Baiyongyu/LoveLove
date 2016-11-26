@@ -11,14 +11,11 @@
 #import "SDCycleScrollView.h"               // 滚动视图
 #import "QMNavigateCollectionViewCell.h"
 #import "WaterLayoutViewController.h"       // 美女流
-
-#import "HomeHeaderView.h"                  // 首页头视图
 #import "MemeoryTimeTableViewController.h"  // 岁月
 #import "ToViewTopButton.h"                 // 回到顶部
 
-@interface HomeViewController () <SDCycleScrollViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource>
+@interface HomeViewController () <SDCycleScrollViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UIScrollViewDelegate>
 
-@property (nonatomic, strong) HomeHeaderView *headerView;
 @property (nonatomic, strong) UIView *bgView;
 /** collevtionView */
 @property (nonatomic, strong) UICollectionView *collectionView;
@@ -36,8 +33,6 @@
 
 - (void)loadSubViews {
     [super loadSubViews];
-    
-    [self.contentView addSubview:self.headerView];
     [self.contentView addSubview:self.memoryTimeTableVC.view];
 }
 
@@ -138,8 +133,6 @@
         default:
             break;
     }
-    
-    
 }
 
 
@@ -204,19 +197,12 @@
 
 #pragma mark - ANTBaseTableViewControllerDelegate
 - (void)pullNextPageRequest:(UITableView *)tableView {
-    [MBProgressHUD showTip:@"摩擦擦~"];
+    [MBProgressHUD showTip:@"亲、要记得经常清理缓存哦~"];
 }
 
 - (void)pullRefreshRequest:(UITableView *)tableView {
-    [MBProgressHUD showTip:@"摩擦擦~"];
+    [MBProgressHUD showTip:@"亲、要记得经常清理缓存哦~"];
     [self.memoryTimeTableVC loadDataFail];
-}
-
-- (HomeHeaderView *)headerView {
-    if (!_headerView) {
-        _headerView = [[HomeHeaderView alloc] initWithFrame:CGRectMake(0, -20, SCREEN_WIDTH, 258)];
-    }
-    return _headerView;
 }
 
 - (MemeoryTimeTableViewController *)memoryTimeTableVC {

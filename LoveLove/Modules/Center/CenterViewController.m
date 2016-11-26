@@ -154,12 +154,12 @@ static CGFloat headerHeight = 164;
                     if (buttonIndex == controller.destructiveButtonIndex) {
                         //点击了确定,遍历整个caches文件,将里面的缓存清空
                         NSString *path = kCachesPath;
-                        NSFileManager *fileManager=[NSFileManager defaultManager];
+                        NSFileManager *fileManager = [NSFileManager defaultManager];
                         if ([fileManager fileExistsAtPath:path]) {
-                            NSArray *childerFiles=[fileManager subpathsAtPath:path];
+                            NSArray *childerFiles = [fileManager subpathsAtPath:path];
                             for (NSString *fileName in childerFiles) {
                                 //如有需要，加入条件，过滤掉不想删除的文件
-                                NSString *absolutePath=[path stringByAppendingPathComponent:fileName];
+                                NSString *absolutePath = [path stringByAppendingPathComponent:fileName];
                                 [fileManager removeItemAtPath:absolutePath error:nil];
                             }
                         }
@@ -180,13 +180,13 @@ static CGFloat headerHeight = 164;
 }
 
 //计算单个文件夹的大小
-- (float)fileSizeAtPath:(NSString *)path{
+- (float)fileSizeAtPath:(NSString *)path {
     
-    NSFileManager *fileManager=[NSFileManager defaultManager];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
     
-    if([fileManager fileExistsAtPath:path]){
+    if([fileManager fileExistsAtPath:path]) {
         
-        long long size=[fileManager attributesOfItemAtPath:path error:nil].fileSize;
+        long long size = [fileManager attributesOfItemAtPath:path error:nil].fileSize;
         return size/1024.0/1024.0;
     }
     return 0;

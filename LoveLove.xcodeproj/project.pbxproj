@@ -21,13 +21,13 @@
 		F35FE54B1DE91D3500766944 /* UIView+UIViewFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE54A1DE91D3500766944 /* UIView+UIViewFrame.m */; };
 		F35FE54E1DE91D7100766944 /* MemoryTimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE54D1DE91D7100766944 /* MemoryTimeModel.m */; };
 		F35FE5521DE91F8D00766944 /* MBProgressHUD+QM.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE5501DE91F8D00766944 /* MBProgressHUD+QM.m */; };
-		F35FE55C1DE92C6000766944 /* HomeDatas.plist in Resources */ = {isa = PBXBuildFile; fileRef = F35FE5541DE92C6000766944 /* HomeDatas.plist */; };
+		F35FE55C1DE92C6000766944 /* WaterList1.plist in Resources */ = {isa = PBXBuildFile; fileRef = F35FE5541DE92C6000766944 /* WaterList1.plist */; };
 		F35FE55D1DE92C6000766944 /* HomeWaterImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE5561DE92C6000766944 /* HomeWaterImage.m */; };
 		F35FE55E1DE92C6100766944 /* WaterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE5581DE92C6000766944 /* WaterCollectionViewCell.m */; };
 		F35FE55F1DE92C6100766944 /* WaterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F35FE5591DE92C6000766944 /* WaterCollectionViewCell.xib */; };
 		F35FE5601DE92C6100766944 /* WaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE55B1DE92C6000766944 /* WaterfallLayout.m */; };
 		F35FE5631DE92CB800766944 /* WaterLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE5621DE92CB800766944 /* WaterLayoutViewController.m */; };
-		F35FE5691DE94E9F00766944 /* AppCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE5681DE94E9F00766944 /* AppCommon.m */; };
+		F35FE56C1DE95E6600766944 /* ToViewTopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE56B1DE95E6600766944 /* ToViewTopButton.m */; };
 		F37E077E1DE85F0D00845118 /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E077D1DE85F0D00845118 /* UIAlertController+Blocks.m */; };
 		F37E07911DE8673E00845118 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E07841DE8673E00845118 /* TAAbstractDotView.m */; };
 		F37E07921DE8673E00845118 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E07861DE8673E00845118 /* TAAnimatedDotView.m */; };
@@ -36,7 +36,6 @@
 		F37E07951DE8673E00845118 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E078C1DE8673E00845118 /* SDCollectionViewCell.m */; };
 		F37E07961DE8673E00845118 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E078E1DE8673E00845118 /* SDCycleScrollView.m */; };
 		F37E07971DE8673E00845118 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E07901DE8673E00845118 /* UIView+SDExtension.m */; };
-		F37E079C1DE87F6300845118 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E079B1DE87F6300845118 /* HomeHeaderView.m */; };
 		F39265F31DE7D3B50064B8B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F39265F21DE7D3B50064B8B2 /* main.m */; };
 		F39265F61DE7D3B50064B8B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F39265F51DE7D3B50064B8B2 /* AppDelegate.m */; };
 		F39265FC1DE7D3B50064B8B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F39265FA1DE7D3B50064B8B2 /* Main.storyboard */; };
@@ -50,7 +49,6 @@
 		F39266591DE7E8A70064B8B2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F392664F1DE7E8A70064B8B2 /* HomeViewController.m */; };
 		F392665E1DE7E8E00064B8B2 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F392665B1DE7E8E00064B8B2 /* AppModel.m */; };
 		F392665F1DE7E8E00064B8B2 /* FMDBManagers.m in Sources */ = {isa = PBXBuildFile; fileRef = F392665D1DE7E8E00064B8B2 /* FMDBManagers.m */; };
-		F39266A61DE811DC0064B8B2 /* ToViewTopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F39266A51DE811DC0064B8B2 /* ToViewTopButton.m */; };
 		F39266A91DE815EA0064B8B2 /* MyLoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F39266A81DE815EA0064B8B2 /* MyLoveViewController.m */; };
 		F39266AB1DE820410064B8B2 /* Model.db in Resources */ = {isa = PBXBuildFile; fileRef = F39266AA1DE820410064B8B2 /* Model.db */; };
 		F39266AE1DE830DC0064B8B2 /* UIImageView+NetworkMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F39266AD1DE830DC0064B8B2 /* UIImageView+NetworkMonitor.m */; };
@@ -85,7 +83,7 @@
 		F35FE54F1DE91F8D00766944 /* MBProgressHUD+QM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+QM.h"; sourceTree = "<group>"; };
 		F35FE5501DE91F8D00766944 /* MBProgressHUD+QM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+QM.m"; sourceTree = "<group>"; };
 		F35FE5511DE91F8D00766944 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		F35FE5541DE92C6000766944 /* HomeDatas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HomeDatas.plist; sourceTree = "<group>"; };
+		F35FE5541DE92C6000766944 /* WaterList1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WaterList1.plist; sourceTree = "<group>"; };
 		F35FE5551DE92C6000766944 /* HomeWaterImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeWaterImage.h; sourceTree = "<group>"; };
 		F35FE5561DE92C6000766944 /* HomeWaterImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeWaterImage.m; sourceTree = "<group>"; };
 		F35FE5571DE92C6000766944 /* WaterCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterCollectionViewCell.h; sourceTree = "<group>"; };
@@ -95,8 +93,8 @@
 		F35FE55B1DE92C6000766944 /* WaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallLayout.m; sourceTree = "<group>"; };
 		F35FE5611DE92CB800766944 /* WaterLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterLayoutViewController.h; sourceTree = "<group>"; };
 		F35FE5621DE92CB800766944 /* WaterLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterLayoutViewController.m; sourceTree = "<group>"; };
-		F35FE5671DE94E9F00766944 /* AppCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCommon.h; sourceTree = "<group>"; };
-		F35FE5681DE94E9F00766944 /* AppCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppCommon.m; sourceTree = "<group>"; };
+		F35FE56A1DE95E6600766944 /* ToViewTopButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToViewTopButton.h; sourceTree = "<group>"; };
+		F35FE56B1DE95E6600766944 /* ToViewTopButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToViewTopButton.m; sourceTree = "<group>"; };
 		F37E077C1DE85F0D00845118 /* UIAlertController+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Blocks.h"; sourceTree = "<group>"; };
 		F37E077D1DE85F0D00845118 /* UIAlertController+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks.m"; sourceTree = "<group>"; };
 		F37E07831DE8673E00845118 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
@@ -113,8 +111,6 @@
 		F37E078E1DE8673E00845118 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
 		F37E078F1DE8673E00845118 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
 		F37E07901DE8673E00845118 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
-		F37E079A1DE87F6300845118 /* HomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeaderView.h; sourceTree = "<group>"; };
-		F37E079B1DE87F6300845118 /* HomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
 		F39265EE1DE7D3B50064B8B2 /* LoveLove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveLove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F39265F21DE7D3B50064B8B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F39265F41DE7D3B50064B8B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,7 +119,6 @@
 		F39265FD1DE7D3B50064B8B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F39266001DE7D3B50064B8B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F39266021DE7D3B50064B8B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F39266181DE7D8D90064B8B2 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		F39266311DE7E4720064B8B2 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F392663B1DE7E8A70064B8B2 /* UIColor+HexStringToColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexStringToColor.h"; sourceTree = "<group>"; };
 		F392663C1DE7E8A70064B8B2 /* UIColor+HexStringToColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexStringToColor.m"; sourceTree = "<group>"; };
@@ -141,8 +136,6 @@
 		F392665B1DE7E8E00064B8B2 /* AppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
 		F392665C1DE7E8E00064B8B2 /* FMDBManagers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBManagers.h; sourceTree = "<group>"; };
 		F392665D1DE7E8E00064B8B2 /* FMDBManagers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBManagers.m; sourceTree = "<group>"; };
-		F39266A41DE811DC0064B8B2 /* ToViewTopButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToViewTopButton.h; sourceTree = "<group>"; };
-		F39266A51DE811DC0064B8B2 /* ToViewTopButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToViewTopButton.m; sourceTree = "<group>"; };
 		F39266A71DE815EA0064B8B2 /* MyLoveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLoveViewController.h; sourceTree = "<group>"; };
 		F39266A81DE815EA0064B8B2 /* MyLoveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLoveViewController.m; sourceTree = "<group>"; };
 		F39266AA1DE820410064B8B2 /* Model.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Model.db; sourceTree = "<group>"; };
@@ -198,7 +191,6 @@
 			children = (
 				F35FE5611DE92CB800766944 /* WaterLayoutViewController.h */,
 				F35FE5621DE92CB800766944 /* WaterLayoutViewController.m */,
-				F35FE5541DE92C6000766944 /* HomeDatas.plist */,
 				F35FE5551DE92C6000766944 /* HomeWaterImage.h */,
 				F35FE5561DE92C6000766944 /* HomeWaterImage.m */,
 				F35FE5571DE92C6000766944 /* WaterCollectionViewCell.h */,
@@ -206,6 +198,7 @@
 				F35FE5591DE92C6000766944 /* WaterCollectionViewCell.xib */,
 				F35FE55A1DE92C6000766944 /* WaterfallLayout.h */,
 				F35FE55B1DE92C6000766944 /* WaterfallLayout.m */,
+				F35FE5541DE92C6000766944 /* WaterList1.plist */,
 			);
 			path = WaterLayout;
 			sourceTree = "<group>";
@@ -251,8 +244,6 @@
 		F37E07991DE87F3C00845118 /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				F37E079A1DE87F6300845118 /* HomeHeaderView.h */,
-				F37E079B1DE87F6300845118 /* HomeHeaderView.m */,
 				F35FE5261DE9156500766944 /* QMNavigateCollectionViewCell.h */,
 				F35FE5271DE9156500766944 /* QMNavigateCollectionViewCell.m */,
 				F35FE5281DE9156500766944 /* QMNavigateCollectionViewCell.xib */,
@@ -291,7 +282,6 @@
 				F39266081DE7D3BC0064B8B2 /* Others */,
 				F39265F11DE7D3B50064B8B2 /* Supporting Files */,
 				F39266311DE7E4720064B8B2 /* PrefixHeader.pch */,
-				F39266181DE7D8D90064B8B2 /* SynthesizeSingleton.h */,
 				F35FE5401DE91BF700766944 /* QMUtil.h */,
 				F35FE5411DE91BF700766944 /* QMUtil.m */,
 			);
@@ -389,11 +379,11 @@
 			children = (
 				F392664E1DE7E8A70064B8B2 /* HomeViewController.h */,
 				F392664F1DE7E8A70064B8B2 /* HomeViewController.m */,
+				F39266A71DE815EA0064B8B2 /* MyLoveViewController.h */,
+				F39266A81DE815EA0064B8B2 /* MyLoveViewController.m */,
 				F35FE5531DE92C6000766944 /* WaterLayout */,
 				F37E07991DE87F3C00845118 /* Header */,
 				F37E07981DE87F3C00845118 /* Footer */,
-				F39266A71DE815EA0064B8B2 /* MyLoveViewController.h */,
-				F39266A81DE815EA0064B8B2 /* MyLoveViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -401,12 +391,8 @@
 		F39266A21DE811CF0064B8B2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				F35FE5671DE94E9F00766944 /* AppCommon.h */,
-				F35FE5681DE94E9F00766944 /* AppCommon.m */,
 				F35FE52E1DE91ABF00766944 /* SlimeRefresh */,
 				F37E07811DE8673E00845118 /* SDCycleScrollView */,
-				F39266A41DE811DC0064B8B2 /* ToViewTopButton.h */,
-				F39266A51DE811DC0064B8B2 /* ToViewTopButton.m */,
 				F39266A31DE811CF0064B8B2 /* ToTopButton */,
 			);
 			path = Components;
@@ -415,6 +401,8 @@
 		F39266A31DE811CF0064B8B2 /* ToTopButton */ = {
 			isa = PBXGroup;
 			children = (
+				F35FE56A1DE95E6600766944 /* ToViewTopButton.h */,
+				F35FE56B1DE95E6600766944 /* ToViewTopButton.m */,
 			);
 			path = ToTopButton;
 			sourceTree = "<group>";
@@ -489,7 +477,7 @@
 				F35FE5361DE91ABF00766944 /* sr_refresh.png in Resources */,
 				F39266AB1DE820410064B8B2 /* Model.db in Resources */,
 				F39265FC1DE7D3B50064B8B2 /* Main.storyboard in Resources */,
-				F35FE55C1DE92C6000766944 /* HomeDatas.plist in Resources */,
+				F35FE55C1DE92C6000766944 /* WaterList1.plist in Resources */,
 				F35FE55F1DE92C6100766944 /* WaterCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,18 +550,16 @@
 				F35FE5291DE9156500766944 /* QMNavigateCollectionViewCell.m in Sources */,
 				F39266AE1DE830DC0064B8B2 /* UIImageView+NetworkMonitor.m in Sources */,
 				F39266571DE7E8A70064B8B2 /* ComTabBarController.m in Sources */,
+				F35FE56C1DE95E6600766944 /* ToViewTopButton.m in Sources */,
 				F37E07971DE8673E00845118 /* UIView+SDExtension.m in Sources */,
 				F39265F61DE7D3B50064B8B2 /* AppDelegate.m in Sources */,
 				F37E07931DE8673E00845118 /* TADotView.m in Sources */,
 				F392665F1DE7E8E00064B8B2 /* FMDBManagers.m in Sources */,
 				F37E07951DE8673E00845118 /* SDCollectionViewCell.m in Sources */,
-				F39266A61DE811DC0064B8B2 /* ToViewTopButton.m in Sources */,
 				F35FE5601DE92C6100766944 /* WaterfallLayout.m in Sources */,
 				F35FE55D1DE92C6000766944 /* HomeWaterImage.m in Sources */,
-				F35FE5691DE94E9F00766944 /* AppCommon.m in Sources */,
 				F39265F31DE7D3B50064B8B2 /* main.m in Sources */,
 				F35FE5381DE91ABF00766944 /* SRRefreshView.m in Sources */,
-				F37E079C1DE87F6300845118 /* HomeHeaderView.m in Sources */,
 				F39266591DE7E8A70064B8B2 /* HomeViewController.m in Sources */,
 				F35FE5451DE91CB300766944 /* MemeoryTimeTableViewController.m in Sources */,
 				F37E07941DE8673E00845118 /* TAPageControl.m in Sources */,

@@ -88,7 +88,7 @@
     //从plist文件中取出字典数组，并封装成对象模型，存入模型数组中
     if (!_images) {
         _images = [NSMutableArray array];
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"HomeDatas.plist" ofType:nil];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"WaterList1.plist" ofType:nil];
         NSArray *imageDics = [NSArray arrayWithContentsOfFile:path];
         for (NSDictionary *imageDic in imageDics) {
             HomeWaterImage *image = [HomeWaterImage imageWithImageDic:imageDic];
@@ -97,8 +97,6 @@
     }
     return _images;
 }
-
-
 
 
 - (void)didReceiveMemoryWarning {

@@ -21,7 +21,6 @@
 #import "UIAlertController+Blocks.h"
 #import "NSObject+PerformBlockAfterDelay.h"
 #import "UIView+UIViewFrame.h"
-#import "AppCommon.h"
 
 
 #define kDefaultViewBackgroundColor [UIColor hexStringToColor:@"#f3f3f0"]
