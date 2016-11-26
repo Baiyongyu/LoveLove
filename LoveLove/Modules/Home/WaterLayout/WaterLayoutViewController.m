@@ -24,7 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.titleLabel.text = @"美女流";
+    self.titleLabel.text = self.title;
+    self.leftBtn.hidden = NO;
 }
 
 - (void)layoutConstraints {
@@ -42,7 +43,7 @@
     }];
     
     //创建collectionView
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, -20, SCREEN_WIDTH, SCREEN_HEIGHT - 64 - 49) collectionViewLayout:waterfall];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, -20, SCREEN_WIDTH, SCREEN_HEIGHT - 44) collectionViewLayout:waterfall];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.collectionView registerNib:[UINib nibWithNibName:@"WaterCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
     self.collectionView.dataSource = self;
@@ -50,7 +51,7 @@
     [self.contentView addSubview:self.collectionView];
     
     /***************************回到顶部*****************************/
-    ToViewTopButton *topButton = [[ToViewTopButton alloc] initWithFrame:CGRectZero scrollView:(UIScrollView *)self.collectionView];
+    ToViewTopButton *topButton = [[ToViewTopButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 65, SCREEN_HEIGHT - 64, 45, 45) scrollView:(UIScrollView *)self.collectionView];
     topButton.showBtnOffset = 350;
     [self.view addSubview:topButton];
 }

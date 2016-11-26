@@ -16,7 +16,6 @@
 @property(nonatomic,strong) UIView *bgView;
 /** collevtionView */
 @property(nonatomic,strong) UICollectionView *collectionView;
-
 @end
 
 @implementation HomeHeaderView
@@ -24,7 +23,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = kDefaultViewBackgroundColor;
-        [self layoutConstraints];
+//        [self layoutConstraints];
     }
     return self;
 }

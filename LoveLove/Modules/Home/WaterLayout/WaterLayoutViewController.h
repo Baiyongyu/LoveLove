@@ -9,5 +9,5 @@
 #import "ComBaseViewController.h"
 
 @interface WaterLayoutViewController : ComBaseViewController
-@property (nonatomic, assign)int index;
+@property (nonatomic, copy) NSString *title;
 @end

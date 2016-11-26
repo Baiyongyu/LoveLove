@@ -38,7 +38,7 @@
         centerVC.tabBarItem.selectedImage = [UIImage imageNamed:@"ln_tab_index_22x19_"];
 
         self.tabBar.tintColor = kNavColor;
-        self.viewControllers = @[homeVC, waterVC, centerVC];
+        self.viewControllers = @[homeVC, centerVC];
     }
     return self;
 }
