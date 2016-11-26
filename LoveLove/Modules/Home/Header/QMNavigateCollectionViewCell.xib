@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="88" id="KGk-i7-Jjw" customClass="QMNavigateCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="131" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="131" height="87"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Ue-qQ-D6q">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="58m-vg-6UF"/>
+                            <constraint firstAttribute="width" constant="40" id="ImX-8U-RQ1"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHh-S1-g8j">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="G3c-lp-mbO"/>
+                            <constraint firstAttribute="height" constant="13" id="Hts-in-YbJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9Ue-qQ-D6q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="CNf-G6-66d"/>
+                    <constraint firstItem="YHh-S1-g8j" firstAttribute="top" secondItem="9Ue-qQ-D6q" secondAttribute="bottom" constant="5" id="Con-84-w7N"/>
+                    <constraint firstItem="YHh-S1-g8j" firstAttribute="top" secondItem="9Ue-qQ-D6q" secondAttribute="bottom" constant="5" id="L76-H8-o0l"/>
+                    <constraint firstItem="9Ue-qQ-D6q" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="UTY-FF-AV0"/>
+                    <constraint firstAttribute="bottom" secondItem="YHh-S1-g8j" secondAttribute="bottom" constant="14" id="vKI-rA-WMG"/>
+                    <constraint firstItem="YHh-S1-g8j" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="yFe-TU-4ub"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Con-84-w7N"/>
+                        <exclude reference="vKI-rA-WMG"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="photoView" destination="9Ue-qQ-D6q" id="wE8-e0-KV3"/>
+                <outlet property="titleLabel" destination="YHh-S1-g8j" id="2f8-jQ-SBz"/>
+            </connections>
+            <point key="canvasLocation" x="215" y="101"/>
+        </tableViewCell>
+    </objects>
+</document>
