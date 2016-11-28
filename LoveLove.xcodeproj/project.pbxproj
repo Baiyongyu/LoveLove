@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		0FC1CEC08DD9AD0411CF533F /* libPods-LoveLove.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8987CABA59A6ECAC4129B6C8 /* libPods-LoveLove.a */; };
+		F35A6E651DEBBD380040D81D /* AlbumCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F35A6E601DEBBD380040D81D /* AlbumCollectionViewCell.m */; };
+		F35A6E661DEBBD380040D81D /* AlbumCollectionViewLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F35A6E621DEBBD380040D81D /* AlbumCollectionViewLineLayout.m */; };
+		F35A6E671DEBBD380040D81D /* PhotoAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35A6E641DEBBD380040D81D /* PhotoAlbumViewController.m */; };
+		F35A6E731DEBD0000040D81D /* LinkPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35A6E721DEBD0000040D81D /* LinkPageViewController.m */; };
+		F35A6E7C1DEBD0AF0040D81D /* LinkCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F35A6E751DEBD0AF0040D81D /* LinkCollectionViewFlowLayout.m */; };
+		F35A6E7D1DEBD0AF0040D81D /* CollectionCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F35A6E771DEBD0AF0040D81D /* CollectionCategoryModel.m */; };
+		F35A6E7E1DEBD0AF0040D81D /* CollectionViewHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F35A6E791DEBD0AF0040D81D /* CollectionViewHeaderView.m */; };
+		F35A6E7F1DEBD0AF0040D81D /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F35A6E7B1DEBD0AF0040D81D /* CollectionViewCell.m */; };
+		F35A6E811DEBD0C00040D81D /* LinkPageDatas.json in Resources */ = {isa = PBXBuildFile; fileRef = F35A6E801DEBD0C00040D81D /* LinkPageDatas.json */; };
+		F35A6E841DEBD1620040D81D /* LinkLeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F35A6E831DEBD1620040D81D /* LinkLeftTableViewCell.m */; };
+		F35A6E871DEBD2240040D81D /* NSObject+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = F35A6E861DEBD2240040D81D /* NSObject+Property.m */; };
 		F35FE5291DE9156500766944 /* QMNavigateCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE5271DE9156500766944 /* QMNavigateCollectionViewCell.m */; };
 		F35FE52A1DE9156500766944 /* QMNavigateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F35FE5281DE9156500766944 /* QMNavigateCollectionViewCell.xib */; };
 		F35FE52D1DE91A3000766944 /* ComBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE52C1DE91A3000766944 /* ComBaseTableViewController.m */; };
@@ -51,9 +62,6 @@
 		F35FE59A1DE976B100766944 /* p9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE5861DE976B000766944 /* p9.jpg */; };
 		F35FE59D1DE9895800766944 /* ComWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE59C1DE9895800766944 /* ComWebViewController.m */; };
 		F35FE5A01DE989AB00766944 /* WebDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE59F1DE989AB00766944 /* WebDetailsViewController.m */; };
-		F35FE5B21DE9EE8B00766944 /* PhotoAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE5B11DE9EE8B00766944 /* PhotoAlbumViewController.m */; };
-		F35FE5B71DE9EEA900766944 /* CollectionViewLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE5B41DE9EEA900766944 /* CollectionViewLineLayout.m */; };
-		F35FE5B81DE9EEA900766944 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE5B61DE9EEA900766944 /* CollectionViewCell.m */; };
 		F37E077E1DE85F0D00845118 /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E077D1DE85F0D00845118 /* UIAlertController+Blocks.m */; };
 		F37E07911DE8673E00845118 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E07841DE8673E00845118 /* TAAbstractDotView.m */; };
 		F37E07921DE8673E00845118 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E07861DE8673E00845118 /* TAAnimatedDotView.m */; };
@@ -85,6 +93,27 @@
 		055EC4880ADF29C4374462CA /* Pods-LoveLove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveLove.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveLove/Pods-LoveLove.debug.xcconfig"; sourceTree = "<group>"; };
 		128058612E0513219931AC9C /* Pods-LoveLove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveLove.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoveLove/Pods-LoveLove.release.xcconfig"; sourceTree = "<group>"; };
 		8987CABA59A6ECAC4129B6C8 /* libPods-LoveLove.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LoveLove.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F35A6E5F1DEBBD380040D81D /* AlbumCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumCollectionViewCell.h; sourceTree = "<group>"; };
+		F35A6E601DEBBD380040D81D /* AlbumCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumCollectionViewCell.m; sourceTree = "<group>"; };
+		F35A6E611DEBBD380040D81D /* AlbumCollectionViewLineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumCollectionViewLineLayout.h; sourceTree = "<group>"; };
+		F35A6E621DEBBD380040D81D /* AlbumCollectionViewLineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumCollectionViewLineLayout.m; sourceTree = "<group>"; };
+		F35A6E631DEBBD380040D81D /* PhotoAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoAlbumViewController.h; sourceTree = "<group>"; };
+		F35A6E641DEBBD380040D81D /* PhotoAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAlbumViewController.m; sourceTree = "<group>"; };
+		F35A6E711DEBD0000040D81D /* LinkPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkPageViewController.h; sourceTree = "<group>"; };
+		F35A6E721DEBD0000040D81D /* LinkPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkPageViewController.m; sourceTree = "<group>"; };
+		F35A6E741DEBD0AF0040D81D /* LinkCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		F35A6E751DEBD0AF0040D81D /* LinkCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		F35A6E761DEBD0AF0040D81D /* CollectionCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionCategoryModel.h; sourceTree = "<group>"; };
+		F35A6E771DEBD0AF0040D81D /* CollectionCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionCategoryModel.m; sourceTree = "<group>"; };
+		F35A6E781DEBD0AF0040D81D /* CollectionViewHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewHeaderView.h; sourceTree = "<group>"; };
+		F35A6E791DEBD0AF0040D81D /* CollectionViewHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewHeaderView.m; sourceTree = "<group>"; };
+		F35A6E7A1DEBD0AF0040D81D /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		F35A6E7B1DEBD0AF0040D81D /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		F35A6E801DEBD0C00040D81D /* LinkPageDatas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LinkPageDatas.json; sourceTree = "<group>"; };
+		F35A6E821DEBD1620040D81D /* LinkLeftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkLeftTableViewCell.h; sourceTree = "<group>"; };
+		F35A6E831DEBD1620040D81D /* LinkLeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkLeftTableViewCell.m; sourceTree = "<group>"; };
+		F35A6E851DEBD2240040D81D /* NSObject+Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Property.h"; sourceTree = "<group>"; };
+		F35A6E861DEBD2240040D81D /* NSObject+Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Property.m"; sourceTree = "<group>"; };
 		F35FE5261DE9156500766944 /* QMNavigateCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMNavigateCollectionViewCell.h; sourceTree = "<group>"; };
 		F35FE5271DE9156500766944 /* QMNavigateCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMNavigateCollectionViewCell.m; sourceTree = "<group>"; };
 		F35FE5281DE9156500766944 /* QMNavigateCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QMNavigateCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -147,12 +176,6 @@
 		F35FE59C1DE9895800766944 /* ComWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComWebViewController.m; sourceTree = "<group>"; };
 		F35FE59E1DE989AB00766944 /* WebDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebDetailsViewController.h; sourceTree = "<group>"; };
 		F35FE59F1DE989AB00766944 /* WebDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebDetailsViewController.m; sourceTree = "<group>"; };
-		F35FE5B01DE9EE8B00766944 /* PhotoAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoAlbumViewController.h; sourceTree = "<group>"; };
-		F35FE5B11DE9EE8B00766944 /* PhotoAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAlbumViewController.m; sourceTree = "<group>"; };
-		F35FE5B31DE9EEA900766944 /* CollectionViewLineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewLineLayout.h; sourceTree = "<group>"; };
-		F35FE5B41DE9EEA900766944 /* CollectionViewLineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewLineLayout.m; sourceTree = "<group>"; };
-		F35FE5B51DE9EEA900766944 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
-		F35FE5B61DE9EEA900766944 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		F37E077C1DE85F0D00845118 /* UIAlertController+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Blocks.h"; sourceTree = "<group>"; };
 		F37E077D1DE85F0D00845118 /* UIAlertController+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks.m"; sourceTree = "<group>"; };
 		F37E07831DE8673E00845118 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
@@ -230,6 +253,39 @@
 				128058612E0513219931AC9C /* Pods-LoveLove.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F35A6E5E1DEBBD380040D81D /* AlbumCollection */ = {
+			isa = PBXGroup;
+			children = (
+				F35A6E5F1DEBBD380040D81D /* AlbumCollectionViewCell.h */,
+				F35A6E601DEBBD380040D81D /* AlbumCollectionViewCell.m */,
+				F35A6E611DEBBD380040D81D /* AlbumCollectionViewLineLayout.h */,
+				F35A6E621DEBBD380040D81D /* AlbumCollectionViewLineLayout.m */,
+				F35A6E631DEBBD380040D81D /* PhotoAlbumViewController.h */,
+				F35A6E641DEBBD380040D81D /* PhotoAlbumViewController.m */,
+			);
+			path = AlbumCollection;
+			sourceTree = "<group>";
+		};
+		F35A6E681DEBBD600040D81D /* Linkpage */ = {
+			isa = PBXGroup;
+			children = (
+				F35A6E711DEBD0000040D81D /* LinkPageViewController.h */,
+				F35A6E721DEBD0000040D81D /* LinkPageViewController.m */,
+				F35A6E821DEBD1620040D81D /* LinkLeftTableViewCell.h */,
+				F35A6E831DEBD1620040D81D /* LinkLeftTableViewCell.m */,
+				F35A6E741DEBD0AF0040D81D /* LinkCollectionViewFlowLayout.h */,
+				F35A6E751DEBD0AF0040D81D /* LinkCollectionViewFlowLayout.m */,
+				F35A6E761DEBD0AF0040D81D /* CollectionCategoryModel.h */,
+				F35A6E771DEBD0AF0040D81D /* CollectionCategoryModel.m */,
+				F35A6E781DEBD0AF0040D81D /* CollectionViewHeaderView.h */,
+				F35A6E791DEBD0AF0040D81D /* CollectionViewHeaderView.m */,
+				F35A6E7A1DEBD0AF0040D81D /* CollectionViewCell.h */,
+				F35A6E7B1DEBD0AF0040D81D /* CollectionViewCell.m */,
+				F35A6E801DEBD0C00040D81D /* LinkPageDatas.json */,
+			);
+			path = Linkpage;
 			sourceTree = "<group>";
 		};
 		F35FE52E1DE91ABF00766944 /* SlimeRefresh */ = {
@@ -407,6 +463,8 @@
 		F392663A1DE7E8A70064B8B2 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				F35A6E851DEBD2240040D81D /* NSObject+Property.h */,
+				F35A6E861DEBD2240040D81D /* NSObject+Property.m */,
 				F35FE54F1DE91F8D00766944 /* MBProgressHUD+QM.h */,
 				F35FE5501DE91F8D00766944 /* MBProgressHUD+QM.m */,
 				F35FE5511DE91F8D00766944 /* PrefixHeader.pch */,
@@ -440,6 +498,7 @@
 		F39266421DE7E8A70064B8B2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F35A6E681DEBBD600040D81D /* Linkpage */,
 				F39266431DE7E8A70064B8B2 /* Base */,
 				F392664D1DE7E8A70064B8B2 /* Home */,
 				F392664A1DE7E8A70064B8B2 /* Center */,
@@ -478,16 +537,11 @@
 			children = (
 				F392664E1DE7E8A70064B8B2 /* HomeViewController.h */,
 				F392664F1DE7E8A70064B8B2 /* HomeViewController.m */,
-				F35FE5B01DE9EE8B00766944 /* PhotoAlbumViewController.h */,
-				F35FE5B11DE9EE8B00766944 /* PhotoAlbumViewController.m */,
-				F35FE5B31DE9EEA900766944 /* CollectionViewLineLayout.h */,
-				F35FE5B41DE9EEA900766944 /* CollectionViewLineLayout.m */,
-				F35FE5B51DE9EEA900766944 /* CollectionViewCell.h */,
-				F35FE5B61DE9EEA900766944 /* CollectionViewCell.m */,
 				F39266A71DE815EA0064B8B2 /* MyLoveViewController.h */,
 				F39266A81DE815EA0064B8B2 /* MyLoveViewController.m */,
 				F35FE59E1DE989AB00766944 /* WebDetailsViewController.h */,
 				F35FE59F1DE989AB00766944 /* WebDetailsViewController.m */,
+				F35A6E5E1DEBBD380040D81D /* AlbumCollection */,
 				F35FE5531DE92C6000766944 /* WaterLayout */,
 				F37E07991DE87F3C00845118 /* Header */,
 				F37E07981DE87F3C00845118 /* Footer */,
@@ -606,6 +660,7 @@
 				F35FE55C1DE92C6000766944 /* WaterList1.plist in Resources */,
 				F35FE5891DE976B000766944 /* p11.jpg in Resources */,
 				F35FE55F1DE92C6100766944 /* WaterCollectionViewCell.xib in Resources */,
+				F35A6E811DEBD0C00040D81D /* LinkPageDatas.json in Resources */,
 				F35FE58F1DE976B100766944 /* p17.jpg in Resources */,
 				F35FE5901DE976B100766944 /* p18.jpg in Resources */,
 				F35FE5991DE976B100766944 /* p8.jpg in Resources */,
@@ -667,8 +722,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F35A6E841DEBD1620040D81D /* LinkLeftTableViewCell.m in Sources */,
 				F35FE53C1DE91B5300766944 /* NSObject+PerformBlockAfterDelay.m in Sources */,
 				F37E077E1DE85F0D00845118 /* UIAlertController+Blocks.m in Sources */,
+				F35A6E7C1DEBD0AF0040D81D /* LinkCollectionViewFlowLayout.m in Sources */,
 				F38D7DA21DEAC63A0066EA92 /* FXBlurView.m in Sources */,
 				F35FE5631DE92CB800766944 /* WaterLayoutViewController.m in Sources */,
 				F35FE52D1DE91A3000766944 /* ComBaseTableViewController.m in Sources */,
@@ -687,26 +744,31 @@
 				F37E07931DE8673E00845118 /* TADotView.m in Sources */,
 				F392665F1DE7E8E00064B8B2 /* FMDBManagers.m in Sources */,
 				F37E07951DE8673E00845118 /* SDCollectionViewCell.m in Sources */,
+				F35A6E871DEBD2240040D81D /* NSObject+Property.m in Sources */,
 				F35FE5601DE92C6100766944 /* WaterfallLayout.m in Sources */,
 				F35FE5A01DE989AB00766944 /* WebDetailsViewController.m in Sources */,
-				F35FE5B21DE9EE8B00766944 /* PhotoAlbumViewController.m in Sources */,
+				F35A6E7E1DEBD0AF0040D81D /* CollectionViewHeaderView.m in Sources */,
 				F35FE55D1DE92C6000766944 /* HomeWaterImage.m in Sources */,
+				F35A6E731DEBD0000040D81D /* LinkPageViewController.m in Sources */,
 				F39265F31DE7D3B50064B8B2 /* main.m in Sources */,
+				F35A6E651DEBBD380040D81D /* AlbumCollectionViewCell.m in Sources */,
+				F35A6E7D1DEBD0AF0040D81D /* CollectionCategoryModel.m in Sources */,
 				F35FE5381DE91ABF00766944 /* SRRefreshView.m in Sources */,
+				F35A6E661DEBBD380040D81D /* AlbumCollectionViewLineLayout.m in Sources */,
 				F39266591DE7E8A70064B8B2 /* HomeViewController.m in Sources */,
 				F35FE5451DE91CB300766944 /* MemeoryTimeTableViewController.m in Sources */,
 				F37E07941DE8673E00845118 /* TAPageControl.m in Sources */,
+				F35A6E7F1DEBD0AF0040D81D /* CollectionViewCell.m in Sources */,
 				F39266521DE7E8A70064B8B2 /* UIColor+HexStringToColor.m in Sources */,
+				F35A6E671DEBBD380040D81D /* PhotoAlbumViewController.m in Sources */,
 				F35FE5421DE91BF700766944 /* QMUtil.m in Sources */,
 				F37E07911DE8673E00845118 /* TAAbstractDotView.m in Sources */,
 				F35FE54E1DE91D7100766944 /* MemoryTimeModel.m in Sources */,
 				F37E07961DE8673E00845118 /* SDCycleScrollView.m in Sources */,
-				F35FE5B71DE9EEA900766944 /* CollectionViewLineLayout.m in Sources */,
 				F35FE59D1DE9895800766944 /* ComWebViewController.m in Sources */,
 				F39266A91DE815EA0064B8B2 /* MyLoveViewController.m in Sources */,
 				F392665E1DE7E8E00064B8B2 /* AppModel.m in Sources */,
 				F39266561DE7E8A70064B8B2 /* ComNavigationController.m in Sources */,
-				F35FE5B81DE9EEA900766944 /* CollectionViewCell.m in Sources */,
 				F39266581DE7E8A70064B8B2 /* CenterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

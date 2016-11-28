@@ -8,7 +8,7 @@
 
 #import "ComTabBarController.h"
 #import "HomeViewController.h"
-#import "WaterLayoutViewController.h"
+#import "LinkPageViewController.h"
 #import "CenterViewController.h"
 
 @interface ComTabBarController ()
@@ -26,10 +26,10 @@
         homeVC.tabBarItem.image = [UIImage imageNamed:@"ln_tab_timeline_25x19_"];
         homeVC.tabBarItem.selectedImage = [UIImage imageNamed:@"ln_tab_timeline_25x19_"];
         
-        WaterLayoutViewController *waterVC = [[WaterLayoutViewController alloc] init];
-        waterVC.tabBarItem.title = @"嗯哼";
-        waterVC.tabBarItem.image = [UIImage imageNamed:@"ln_tab_chat_32x19_"];
-        waterVC.tabBarItem.selectedImage = [UIImage imageNamed:@"ln_tab_chat_32x19_"];
+        LinkPageViewController *linkVC = [[LinkPageViewController alloc] init];
+        linkVC.tabBarItem.title = @"联动";
+        linkVC.tabBarItem.image = [UIImage imageNamed:@"ln_tab_chat_32x19_"];
+        linkVC.tabBarItem.selectedImage = [UIImage imageNamed:@"ln_tab_chat_32x19_"];
         
         // 中心
         CenterViewController *centerVC = [[CenterViewController alloc] init];
@@ -38,7 +38,7 @@
         centerVC.tabBarItem.selectedImage = [UIImage imageNamed:@"ln_tab_index_22x19_"];
 
         self.tabBar.tintColor = kNavColor;
-        self.viewControllers = @[homeVC, centerVC];
+        self.viewControllers = @[homeVC, linkVC, centerVC];
     }
     return self;
 }

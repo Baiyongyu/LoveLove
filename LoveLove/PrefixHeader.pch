@@ -21,6 +21,7 @@
 #import "UIAlertController+Blocks.h"
 #import "NSObject+PerformBlockAfterDelay.h"
 #import "UIView+UIViewFrame.h"
+#import "NSObject+Property.h"
 
 #import "ToViewTopButton.h"       
 
@@ -29,10 +30,14 @@
 #define kNavColor [UIColor hexStringToColor:@"#FDD530"]
 //淡灰色
 #define kLightGrayColor [UIColor hexStringToColor:@"#999999"]
+//深灰色
+#define kDarkGrayColor [UIColor hexStringToColor:@"#727171"]
 //浅灰色背景
 #define kBgLightGrayColor [UIColor colorWithWhite:0 alpha:0.2]
 //绿色
 #define kGreenColor [UIColor hexStringToColor:@"#55bc22"]
+// 透明
+#define kLucencyColor [UIColor hexStringToColor:@"#f0f0f0"]
 
 
 //wifi下手动下载图片

@@ -6,9 +6,9 @@
 //  Copyright © 2016年 北京116科技有限公司. All rights reserved.
 //
 
-#import "CollectionViewCell.h"
+#import "AlbumCollectionViewCell.h"
 
-@implementation CollectionViewCell
+@implementation AlbumCollectionViewCell
 
 #pragma mark -
 #pragma mark init methods

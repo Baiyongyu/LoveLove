@@ -9,8 +9,8 @@
 #import "PhotoAlbumViewController.h"
 
 #import "FXBlurView.h"
-#import "CollectionViewCell.h"
-#import "CollectionViewLineLayout.h"
+#import "AlbumCollectionViewCell.h"
+#import "AlbumCollectionViewLineLayout.h"
 
 #import "MyLoveViewController.h"
 
@@ -20,7 +20,7 @@ static NSString *reuseIdentifier = @"Cell";
 
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UICollectionView *collectionView;
-@property (nonatomic, strong) CollectionViewLineLayout *lineLayout;
+@property (nonatomic, strong) AlbumCollectionViewLineLayout *lineLayout;
 @property (nonatomic, assign) ItemSelectType ItemSelectType;
 
 
@@ -61,7 +61,7 @@ static NSString *reuseIdentifier = @"Cell";
 
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
-        _lineLayout = [[CollectionViewLineLayout alloc] init];
+        _lineLayout = [[AlbumCollectionViewLineLayout alloc] init];
         _collectionView = [[UICollectionView alloc] initWithFrame:[UIScreen mainScreen].bounds
                                              collectionViewLayout:_lineLayout];
         _collectionView.backgroundColor = [UIColor whiteColor];
@@ -69,7 +69,7 @@ static NSString *reuseIdentifier = @"Cell";
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
         _collectionView.backgroundView = self.imageView;
-        [_collectionView registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+        [_collectionView registerClass:[AlbumCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
         [_collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:7 inSection:0]
                                 atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally
                                         animated:YES];
@@ -98,7 +98,7 @@ static NSString *reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    AlbumCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     NSString *imageName = [NSString stringWithFormat:@"p%zi.jpg", indexPath.item % 20];
     cell.imageView.image = [UIImage imageNamed:imageName];
     

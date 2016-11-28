@@ -134,7 +134,7 @@
         _pictureView = ({
 //            UIImageView * picture = [[UIImageView alloc]initWithFrame:CGRectMake(0, -cellHeight/2, SCREEN_WIDTH, cellHeight * 2)];
             UIImageView * picture = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, cellHeight)];
-            picture.contentMode = UIViewContentModeScaleToFill;
+            picture.contentMode = UIViewContentModeScaleAspectFit;
             picture;
         });
         [self.contentView  addSubview:_pictureView];

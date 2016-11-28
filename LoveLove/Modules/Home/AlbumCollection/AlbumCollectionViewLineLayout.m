@@ -6,7 +6,7 @@
 //  Copyright © 2016年 北京116科技有限公司. All rights reserved.
 //
 
-#import "CollectionViewLineLayout.h"
+#import "AlbumCollectionViewLineLayout.h"
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -17,7 +17,7 @@
 #define ACTIVE_DISTANCE 200
 #define ZOOM_FACTOR 0.3
 
-@implementation CollectionViewLineLayout
+@implementation AlbumCollectionViewLineLayout
 
 -(id)init {
     self = [super init];
