@@ -13,22 +13,22 @@
 #import "HomeWaterImage.h"
 #import "MyLoveViewController.h"
 #import "ToViewTopButton.h"                 // 回到顶部
-
+#import "PhotoAlbumViewController.h"
 @interface WaterLayoutViewController () <UICollectionViewDataSource,UICollectionViewDelegate,WaterfallLayoutDelegate>
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray<HomeWaterImage *> *images;
-@property (nonatomic, assign) ItemSelectType ItemSelectType;
+//@property (nonatomic, assign) ItemSelectType ItemSelectType;
 
 @end
 
 @implementation WaterLayoutViewController
 
-- (instancetype)initWithItemSelectType:(ItemSelectType)itemSelectType {
-    if (self = [super init]) {
-        _ItemSelectType = itemSelectType;
-    }
-    return self;
-}
+//- (instancetype)initWithItemSelectType:(ItemSelectType)itemSelectType {
+//    if (self = [super init]) {
+//        _ItemSelectType = itemSelectType;
+//    }
+//    return self;
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -87,7 +87,8 @@
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    MyLoveViewController *loveVC = [[MyLoveViewController alloc] init];
+//    MyLoveViewController *loveVC = [[MyLoveViewController alloc] init];
+    PhotoAlbumViewController *loveVC = [[PhotoAlbumViewController alloc] init];
     loveVC.index = (int)indexPath.row + 1;
     loveVC.titles = self.titles;
     [self.navigationController pushViewController:loveVC animated:YES];

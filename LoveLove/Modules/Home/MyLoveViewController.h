@@ -31,4 +31,10 @@
 
 @property (nonatomic, strong) AppModel *appModel;
 
+@property (nonatomic,copy)NSString * imageName;
+@property (nonatomic,assign)float CellHeight;
+@property (nonatomic,assign)float CellWeigh;
+@property (nonatomic,assign)float BiLi;
+@property (nonatomic,strong)NSMutableArray *arr;
+
 @end

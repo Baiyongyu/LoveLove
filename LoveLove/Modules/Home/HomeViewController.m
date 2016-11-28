@@ -11,8 +11,8 @@
 #import "SDCycleScrollView.h"               // 滚动视图
 #import "QMNavigateCollectionViewCell.h"
 #import "WaterLayoutViewController.h"       // 美女流
+#import "PhotoAlbumViewController.h"
 #import "MemeoryTimeTableViewController.h"  // 岁月
-#import "ToViewTopButton.h"                 // 回到顶部
 
 @interface HomeViewController () <SDCycleScrollViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UIScrollViewDelegate>
 
@@ -39,16 +39,22 @@
 
 - (void)layoutConstraints {
     
+//    UIImageView *bgImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+//    bgImgView.image = [UIImage imageNamed:@"home_bkg_8_320x600_"];
+//    [self.contentView addSubview:bgImgView];
+    
     // 背景视图
-    self.bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 258)];
+    self.bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 268)];
     self.bgView.backgroundColor = kDefaultViewBackgroundColor;
     [self.contentView addSubview:self.bgView];
     
     // ScrollView
-    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 160) delegate:self placeholderImage:[UIImage imageNamed:@"zhanweitu.jpg"]];
+    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(10, 10, SCREEN_WIDTH - 20, 160) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
     cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleClassic;
     cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
     cycleScrollView.autoScrollTimeInterval = 3;
+    cycleScrollView.layer.cornerRadius = 5.0f;
+    cycleScrollView.layer.masksToBounds = YES;
     
     NSArray *imgArray = @[@"http://img.zngirls.com/gallery/19705/19815/s/0.jpg",
                           @"http://img.zngirls.com/gallery/19705/19815/s/001.jpg"];
@@ -104,14 +110,14 @@
     switch (indexPath.row) {
         case 0:
         {
-            WaterLayoutViewController *waterVC = [[WaterLayoutViewController alloc] initWithItemSelectType:ItemSelectTypeOne];
+            PhotoAlbumViewController *waterVC = [[PhotoAlbumViewController alloc] initWithItemSelectType:ItemSelectTypeOne];
             waterVC.titles = @"夏茉";
             [self.navigationController pushViewController:waterVC animated:YES];
         }
             break;
         case 1:
         {
-            WaterLayoutViewController *waterVC = [[WaterLayoutViewController alloc] initWithItemSelectType:ItemSelectTypeTwo];
+            PhotoAlbumViewController *waterVC = [[PhotoAlbumViewController alloc] initWithItemSelectType:ItemSelectTypeTwo];
             waterVC.titles = @"刘飞儿";
             [self.navigationController pushViewController:waterVC animated:YES];
         }

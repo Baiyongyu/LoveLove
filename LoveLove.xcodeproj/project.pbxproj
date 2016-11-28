@@ -51,6 +51,9 @@
 		F35FE59A1DE976B100766944 /* p9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F35FE5861DE976B000766944 /* p9.jpg */; };
 		F35FE59D1DE9895800766944 /* ComWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE59C1DE9895800766944 /* ComWebViewController.m */; };
 		F35FE5A01DE989AB00766944 /* WebDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE59F1DE989AB00766944 /* WebDetailsViewController.m */; };
+		F35FE5B21DE9EE8B00766944 /* PhotoAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE5B11DE9EE8B00766944 /* PhotoAlbumViewController.m */; };
+		F35FE5B71DE9EEA900766944 /* CollectionViewLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE5B41DE9EEA900766944 /* CollectionViewLineLayout.m */; };
+		F35FE5B81DE9EEA900766944 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FE5B61DE9EEA900766944 /* CollectionViewCell.m */; };
 		F37E077E1DE85F0D00845118 /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E077D1DE85F0D00845118 /* UIAlertController+Blocks.m */; };
 		F37E07911DE8673E00845118 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E07841DE8673E00845118 /* TAAbstractDotView.m */; };
 		F37E07921DE8673E00845118 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E07861DE8673E00845118 /* TAAnimatedDotView.m */; };
@@ -59,6 +62,7 @@
 		F37E07951DE8673E00845118 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E078C1DE8673E00845118 /* SDCollectionViewCell.m */; };
 		F37E07961DE8673E00845118 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E078E1DE8673E00845118 /* SDCycleScrollView.m */; };
 		F37E07971DE8673E00845118 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E07901DE8673E00845118 /* UIView+SDExtension.m */; };
+		F38D7DA21DEAC63A0066EA92 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = F38D7DA11DEAC63A0066EA92 /* FXBlurView.m */; };
 		F39265F31DE7D3B50064B8B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F39265F21DE7D3B50064B8B2 /* main.m */; };
 		F39265F61DE7D3B50064B8B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F39265F51DE7D3B50064B8B2 /* AppDelegate.m */; };
 		F39265FC1DE7D3B50064B8B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F39265FA1DE7D3B50064B8B2 /* Main.storyboard */; };
@@ -143,6 +147,12 @@
 		F35FE59C1DE9895800766944 /* ComWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComWebViewController.m; sourceTree = "<group>"; };
 		F35FE59E1DE989AB00766944 /* WebDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebDetailsViewController.h; sourceTree = "<group>"; };
 		F35FE59F1DE989AB00766944 /* WebDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebDetailsViewController.m; sourceTree = "<group>"; };
+		F35FE5B01DE9EE8B00766944 /* PhotoAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoAlbumViewController.h; sourceTree = "<group>"; };
+		F35FE5B11DE9EE8B00766944 /* PhotoAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAlbumViewController.m; sourceTree = "<group>"; };
+		F35FE5B31DE9EEA900766944 /* CollectionViewLineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewLineLayout.h; sourceTree = "<group>"; };
+		F35FE5B41DE9EEA900766944 /* CollectionViewLineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewLineLayout.m; sourceTree = "<group>"; };
+		F35FE5B51DE9EEA900766944 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		F35FE5B61DE9EEA900766944 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		F37E077C1DE85F0D00845118 /* UIAlertController+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Blocks.h"; sourceTree = "<group>"; };
 		F37E077D1DE85F0D00845118 /* UIAlertController+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks.m"; sourceTree = "<group>"; };
 		F37E07831DE8673E00845118 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
@@ -159,6 +169,8 @@
 		F37E078E1DE8673E00845118 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
 		F37E078F1DE8673E00845118 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
 		F37E07901DE8673E00845118 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		F38D7DA01DEAC63A0066EA92 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		F38D7DA11DEAC63A0066EA92 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 		F39265EE1DE7D3B50064B8B2 /* LoveLove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveLove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F39265F21DE7D3B50064B8B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F39265F41DE7D3B50064B8B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -466,6 +478,12 @@
 			children = (
 				F392664E1DE7E8A70064B8B2 /* HomeViewController.h */,
 				F392664F1DE7E8A70064B8B2 /* HomeViewController.m */,
+				F35FE5B01DE9EE8B00766944 /* PhotoAlbumViewController.h */,
+				F35FE5B11DE9EE8B00766944 /* PhotoAlbumViewController.m */,
+				F35FE5B31DE9EEA900766944 /* CollectionViewLineLayout.h */,
+				F35FE5B41DE9EEA900766944 /* CollectionViewLineLayout.m */,
+				F35FE5B51DE9EEA900766944 /* CollectionViewCell.h */,
+				F35FE5B61DE9EEA900766944 /* CollectionViewCell.m */,
 				F39266A71DE815EA0064B8B2 /* MyLoveViewController.h */,
 				F39266A81DE815EA0064B8B2 /* MyLoveViewController.m */,
 				F35FE59E1DE989AB00766944 /* WebDetailsViewController.h */,
@@ -480,6 +498,8 @@
 		F39266A21DE811CF0064B8B2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F38D7DA01DEAC63A0066EA92 /* FXBlurView.h */,
+				F38D7DA11DEAC63A0066EA92 /* FXBlurView.m */,
 				F35FE52E1DE91ABF00766944 /* SlimeRefresh */,
 				F37E07811DE8673E00845118 /* SDCycleScrollView */,
 				F39266A31DE811CF0064B8B2 /* ToTopButton */,
@@ -531,7 +551,7 @@
 				TargetAttributes = {
 					F39265ED1DE7D3B50064B8B2 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = Q5SWE3562A;
+						DevelopmentTeam = KK59AKUJZC;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -649,6 +669,7 @@
 			files = (
 				F35FE53C1DE91B5300766944 /* NSObject+PerformBlockAfterDelay.m in Sources */,
 				F37E077E1DE85F0D00845118 /* UIAlertController+Blocks.m in Sources */,
+				F38D7DA21DEAC63A0066EA92 /* FXBlurView.m in Sources */,
 				F35FE5631DE92CB800766944 /* WaterLayoutViewController.m in Sources */,
 				F35FE52D1DE91A3000766944 /* ComBaseTableViewController.m in Sources */,
 				F37E07921DE8673E00845118 /* TAAnimatedDotView.m in Sources */,
@@ -668,6 +689,7 @@
 				F37E07951DE8673E00845118 /* SDCollectionViewCell.m in Sources */,
 				F35FE5601DE92C6100766944 /* WaterfallLayout.m in Sources */,
 				F35FE5A01DE989AB00766944 /* WebDetailsViewController.m in Sources */,
+				F35FE5B21DE9EE8B00766944 /* PhotoAlbumViewController.m in Sources */,
 				F35FE55D1DE92C6000766944 /* HomeWaterImage.m in Sources */,
 				F39265F31DE7D3B50064B8B2 /* main.m in Sources */,
 				F35FE5381DE91ABF00766944 /* SRRefreshView.m in Sources */,
@@ -679,10 +701,12 @@
 				F37E07911DE8673E00845118 /* TAAbstractDotView.m in Sources */,
 				F35FE54E1DE91D7100766944 /* MemoryTimeModel.m in Sources */,
 				F37E07961DE8673E00845118 /* SDCycleScrollView.m in Sources */,
+				F35FE5B71DE9EEA900766944 /* CollectionViewLineLayout.m in Sources */,
 				F35FE59D1DE9895800766944 /* ComWebViewController.m in Sources */,
 				F39266A91DE815EA0064B8B2 /* MyLoveViewController.m in Sources */,
 				F392665E1DE7E8E00064B8B2 /* AppModel.m in Sources */,
 				F39266561DE7E8A70064B8B2 /* ComNavigationController.m in Sources */,
+				F35FE5B81DE9EEA900766944 /* CollectionViewCell.m in Sources */,
 				F39266581DE7E8A70064B8B2 /* CenterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -805,7 +829,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = Q5SWE3562A;
+				DEVELOPMENT_TEAM = KK59AKUJZC;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = LoveLove/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -823,7 +847,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = Q5SWE3562A;
+				DEVELOPMENT_TEAM = KK59AKUJZC;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = LoveLove/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

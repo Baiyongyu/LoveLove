@@ -9,13 +9,13 @@
 #import "WaterCollectionViewCell.h"
 
 @interface WaterCollectionViewCell()
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 
 @end
 
 @implementation WaterCollectionViewCell
 - (void)setImageURL:(NSURL *)imageURL {
     _imageURL = imageURL;
-    [self.imageView sd_setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"zhanweitu.jpg"]];
+    [self.imageView sd_setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"placeholder"]];
 }
 @end

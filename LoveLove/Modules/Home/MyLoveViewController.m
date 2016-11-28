@@ -34,7 +34,7 @@
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.backgroundColor = kDefaultViewBackgroundColor;
     [self.contentView addSubview:_tableView];
-
+    
 }
 
 - (void)loadData {

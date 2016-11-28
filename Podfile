@@ -9,5 +9,6 @@ pod 'SDWebImage', '~> 3.8.1'
 pod 'FMDB', '~> 2.6.2'
 pod 'Masonry', '~> 1.0.0'
 pod "MBProgressHUD", "~> 0.9.2"
+pod 'MJExtension', '~> 3.0.13'
 
 end

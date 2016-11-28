@@ -9,20 +9,20 @@
 #import "ComBaseViewController.h"
 
 // 判断点击了那个item
-typedef NS_ENUM(NSInteger , ItemSelectType) {
-    ItemSelectTypeOne = 0,
-    ItemSelectTypeTwo,
-    ItemSelectTypeThree,
-    ItemSelectTypeFore,
-    ItemSelectTypeFive,
-    ItemSelectTypeSix,
-    ItemSelectTypeSeven,
-    ItemSelectTypeEight
-};
+//typedef NS_ENUM(NSInteger , ItemSelectType) {
+//    ItemSelectTypeOne = 0,
+//    ItemSelectTypeTwo,
+//    ItemSelectTypeThree,
+//    ItemSelectTypeFore,
+//    ItemSelectTypeFive,
+//    ItemSelectTypeSix,
+//    ItemSelectTypeSeven,
+//    ItemSelectTypeEight
+//};
 
 @interface WaterLayoutViewController : ComBaseViewController
 @property (nonatomic, copy) NSString *titles;
 
 /** 从哪个页面到这个界面 */
-- (instancetype)initWithItemSelectType:(ItemSelectType)itemSelectType;
+//- (instancetype)initWithItemSelectType:(ItemSelectType)itemSelectType;
 @end

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface WaterCollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (nonatomic, strong) NSURL *imageURL;
 @end
