@@ -19,5 +19,6 @@
 
 @property (nonatomic, copy) NSString *icon_url;
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *parent_id;
 
 @end

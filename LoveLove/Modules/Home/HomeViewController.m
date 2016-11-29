@@ -13,13 +13,15 @@
 #import "WaterLayoutViewController.h"       // 美女流
 #import "PhotoAlbumViewController.h"
 #import "MemeoryTimeTableViewController.h"  // 岁月
-
-@interface HomeViewController () <SDCycleScrollViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UIScrollViewDelegate>
+#import "HomeHeaderView.h"
+#import "PersonCenterViewController.h"     // 个人资料详情
+@interface HomeViewController () <SDCycleScrollViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UIScrollViewDelegate,DidSeletedViewItemDelegate>
 
 @property (nonatomic, strong) UIView *bgView;
 /** collevtionView */
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) MemeoryTimeTableViewController *memoryTimeTableVC;
+@property (nonatomic, strong) HomeHeaderView *headerView;
 
 @end
 
@@ -44,7 +46,7 @@
 //    [self.contentView addSubview:bgImgView];
     
     // 背景视图
-    self.bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 268)];
+    self.bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 268 + 88 + 300 + 30)];
     self.bgView.backgroundColor = kDefaultViewBackgroundColor;
     [self.contentView addSubview:self.bgView];
     
@@ -56,16 +58,18 @@
     cycleScrollView.layer.cornerRadius = 5.0f;
     cycleScrollView.layer.masksToBounds = YES;
     
-    NSArray *imgArray = @[@"http://img.zngirls.com/gallery/19705/19815/s/0.jpg",
-                          @"http://img.zngirls.com/gallery/19705/19815/s/001.jpg"];
+    NSArray *imgArray = @[@"http://img.zngirls.com/gallery/21337/17758/003.jpg",
+                          @"http://img.zngirls.com/gallery/19705/19815/s/008.jpg"];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         cycleScrollView.imageURLStringsGroup = imgArray;
     });
-    cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleToFill;
+    cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
     [self.bgView addSubview:cycleScrollView];
     
+    
     // CollectionView
+    
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(cycleScrollView.frame), SCREEN_WIDTH, 88) collectionViewLayout:layout];
     self.collectionView.backgroundColor = [UIColor whiteColor];
@@ -82,6 +86,11 @@
     [self.collectionView registerNib:[UINib nibWithNibName:@"QMNavigateCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"NavCell"];
     [self.bgView addSubview:self.collectionView];
     
+    self.headerView = [[HomeHeaderView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.collectionView.frame), SCREEN_WIDTH, 200)];
+    [self.bgView addSubview:self.headerView];
+    
+    self.headerView.delegate = self;
+    
     
     /**************************MemoryTimeTableVC*****************************/
     WS(weakSelf);
@@ -94,6 +103,54 @@
     ToViewTopButton *topButton = [[ToViewTopButton alloc] initWithFrame:CGRectZero scrollView:(UIScrollView *)self.memoryTimeTableVC.view];
     topButton.showBtnOffset = 350;
     [self.view addSubview:topButton];
+}
+#pragma mark - 首页热门推荐item 代理
+- (void)didSeletedViewItem:(NSIndexPath *)indexPath {
+    
+    PersonCenterViewController *personVC = [[PersonCenterViewController alloc] init];
+    
+    personVC.scores = @[@(5),@(5),@(4),@(5),@(6)];
+//    personVC.scores = @[@([self.scoreLabel1.text floatValue]),@([self.scoreLabel2.text floatValue]),@([self.scoreLabel3.text floatValue]),@([self.scoreLabel4.text floatValue]),@([self.scoreLabel5.text floatValue])];
+//    personVC.compareScores =@[@([self.compareLabel1.text floatValue]),@([self.compareLabel2.text floatValue]),@([self.compareLabel3.text floatValue]),@([self.compareLabel4.text floatValue]),@([self.compareLabel5.text floatValue])];
+    
+    
+    [self.navigationController pushViewController:personVC animated:YES];
+    
+    /*
+    switch (indexPath.item) {
+        case 0:
+        {
+            PhotoAlbumViewController *waterVC = [[PhotoAlbumViewController alloc] initWithItemSelectType:ItemSelectTypeOne];
+            waterVC.titles = @"夏茉";
+            [self.navigationController pushViewController:waterVC animated:YES];
+        }
+            break;
+        case 1:
+        {
+            PersonCenterViewController *personVC = [[PersonCenterViewController alloc] init];
+            [self.navigationController pushViewController:personVC animated:YES];
+//            PhotoAlbumViewController *waterVC = [[PhotoAlbumViewController alloc] initWithItemSelectType:ItemSelectTypeTwo];
+//            waterVC.titles = @"刘飞儿";
+//            [self.navigationController pushViewController:waterVC animated:YES];
+        }
+            break;
+        case 2:
+        {
+            PhotoAlbumViewController *photoVC = [[PhotoAlbumViewController alloc] init];
+            [self.navigationController pushViewController:photoVC animated:YES];
+        }
+            break;
+        case 3:
+        {
+            PhotoAlbumViewController *photoVC = [[PhotoAlbumViewController alloc] init];
+            [self.navigationController pushViewController:photoVC animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
+     */
 }
 
 #pragma mark - collectionView delegate
@@ -141,9 +198,6 @@
             break;
     }
 }
-
-
-
 
 - (void)loadData {
     

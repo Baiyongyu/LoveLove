@@ -14,6 +14,9 @@
 #import "MBProgressHUD.h"
 #import "MBProgressHUD+QM.h"
 #import <MJExtension.h>
+#import "UIView+SDAutoLayout.h"
+
+
 
 #import "UIImageView+NetworkMonitor.h"
 #import <UIImageView+WebCache.h>
@@ -26,6 +29,7 @@
 #import "ToViewTopButton.h"       
 
 
+#define color(r,g,b,al) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:al]
 #define kDefaultViewBackgroundColor [UIColor hexStringToColor:@"#f3f3f0"]
 #define kNavColor [UIColor hexStringToColor:@"#FDD530"]
 //淡灰色

@@ -9,7 +9,7 @@
 #import "MyLoveViewController.h"
 #import "FMDBManagers.h"
 #import "WebDetailsViewController.h"
-#define cellHeight 250
+#define cellHeight 500
 
 @interface MyLoveViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) UITableView *tableView;
@@ -18,7 +18,6 @@
 @end
 
 @implementation MyLoveViewController
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -87,11 +86,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     WebDetailsViewController *detailsVC = [[WebDetailsViewController alloc] init];
     AppModel *model = self.dataSource[indexPath.row];
     detailsVC.urlStr = model.image;
     [self.navigationController pushViewController:detailsVC animated:YES];
 }
+
+
 
 //- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 //    // visibleCells 获取界面上能显示出来了cell
@@ -133,11 +135,11 @@
         //pictureView的Y往上加一半cellHeight 高度为2 * cellHeight，这样上下多出一半的cellHeight
         _pictureView = ({
 //            UIImageView * picture = [[UIImageView alloc]initWithFrame:CGRectMake(0, -cellHeight/2, SCREEN_WIDTH, cellHeight * 2)];
-            UIImageView * picture = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, cellHeight)];
-            picture.contentMode = UIViewContentModeScaleAspectFit;
+            UIImageView *picture = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, cellHeight)];
+            picture.contentMode = UIViewContentModeScaleAspectFill;
             picture;
         });
-        [self.contentView  addSubview:_pictureView];
+        [self.contentView addSubview:_pictureView];
         
         _coverview = ({
             UIView * coverview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, cellHeight)];

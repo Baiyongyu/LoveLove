@@ -13,6 +13,7 @@
 @interface MyLoveViewController : ComBaseViewController
 @property (nonatomic, assign)int index;
 @property (nonatomic, copy) NSString *titles;
+@property (nonatomic, copy) NSString *parent_id;
 @end
 
 @interface MyCell : UITableViewCell

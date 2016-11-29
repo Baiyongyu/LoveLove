@@ -13,6 +13,7 @@
 #import "CollectionViewHeaderView.h"
 #import "LinkCollectionViewFlowLayout.h"
 #import "LinkLeftTableViewCell.h"
+#import "MyLoveViewController.h"
 
 @interface LinkPageViewController () <UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate,
 UICollectionViewDataSource>
@@ -144,6 +145,18 @@ UICollectionViewDataSource>
 - (void)selectRowAtIndexPath:(NSInteger)index {
     [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0] animated:YES scrollPosition:UITableViewScrollPositionMiddle];
 }
+
+// 点击查看详情
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    MyLoveViewController *loveVC = [[MyLoveViewController alloc] init];
+//    loveVC.index = (int)indexPath.row;
+    
+//    SubCategoryModel *model = self.collectionDatas[indexPath.section][indexPath.row];
+//    loveVC.parent_id = model.parent_id;
+//    loveVC.titles = self.titles;
+    [self.navigationController pushViewController:loveVC animated:YES];
+}
+
 
 #pragma mark - UIScrollView Delegate
 // 标记一下CollectionView的滚动方向，是向上还是向下

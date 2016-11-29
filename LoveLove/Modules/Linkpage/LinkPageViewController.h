@@ -9,5 +9,5 @@
 #import "ComBaseViewController.h"
 
 @interface LinkPageViewController : ComBaseViewController
-
+@property (nonatomic, copy) NSString *titles;
 @end

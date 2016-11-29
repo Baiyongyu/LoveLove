@@ -23,7 +23,6 @@
         self.imageV = [[UIImageView alloc] initWithFrame:CGRectMake(2, 2, self.frame.size.width - 4, self.frame.size.height - 4)];
         self.imageV.contentMode = UIViewContentModeScaleToFill;
         [self.contentView addSubview:self.imageV];
-
     }
     return self;
 }
