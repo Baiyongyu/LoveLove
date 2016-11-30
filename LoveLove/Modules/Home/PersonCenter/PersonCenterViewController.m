@@ -18,6 +18,8 @@
 #import "UITableView+SDAutoTableViewCellHeight.h"
 #import "CircleFriendsTableViewCell.h"
 
+#import "PhotoAlbumViewController.h"
+
 #define kTimeLineTableViewCellId @"CircleFriendsTableViewCell"
 
 @interface PersonCenterViewController () <UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource,NavHeadTitleViewDelegate>
@@ -65,6 +67,111 @@
     [UIView animateWithDuration:1.5 animations:^{
         self.animateView.transform = CGAffineTransformIdentity;
     }];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 2;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.row == 0) {
+        SXFiveScoreCell *cell = [SXFiveScoreCell cell];
+        
+        cell.scores = self.scores;
+//        cell.compareScores = self.compareScores;
+//        cell.labelNames = self.labelNames;
+        self.animateView = cell.scoreView;
+        
+        return cell;
+    }
+    
+    static NSString *ID = @"cell";
+    CircleFriendsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (cell == nil) {
+        cell = [[CircleFriendsTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+    }
+    cell.photoTapBlock = ^{
+        PhotoAlbumViewController *photoVC = [[PhotoAlbumViewController alloc] init];
+        photoVC.titles = @"夏茉";
+        [self.navigationController pushViewController:photoVC animated:YES];
+    };
+    
+    cell.iconView.image = [UIImage imageNamed:@"liu1.jpg"];
+    cell.nameLable.text = @"夏茉";
+    cell.contentLabel.text = @"刘飞儿，女，2007年第四十七届国际小姐中国冠军、中华慈善总会授予“爱心使者”称号；香港中华环境保护志愿者协会“环保公益事业形象大使”。";
+    
+    NSArray *picImageNamesArray = @[ @"xiamo1.jpg",@"xiamo2.jpg",@"xiamo3.jpg",@"xiamo4.jpg",@"xiamo5.jpg",@"xiamo6.jpg",@"xiamo7.jpg",@"xiamo8.jpg",@"xiamo9.jpg"];
+    cell.picContainerView.picPathStringsArray = picImageNamesArray;
+    
+    // 此步设置用于实现cell的frame缓存，可以让tableview滑动更加流畅
+    [cell useCellFrameCacheWithIndexPath:indexPath tableView:tableView];
+    
+//    cell.model = self.dataArray[indexPath.row];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        return 200;
+    }
+    return 420;
+    // >>>>>>>>>>>>>>>>>>>>> * cell自适应 * >>>>>>>>>>>>>>>>>>>>>>>>
+//    id model = self.dataArray[indexPath.row];
+//    return [self.tableView cellHeightForIndexPath:indexPath model:model keyPath:@"model" cellClass:[CircleFriendsTableViewCell class] contentViewWidth:[self cellContentViewWith]];
+}
+
+- (CGFloat)cellContentViewWith {
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    // 适配ios7横屏
+    if ([UIApplication sharedApplication].statusBarOrientation != UIInterfaceOrientationPortrait && [[UIDevice currentDevice].systemVersion floatValue] < 8) {
+        width = [UIScreen mainScreen].bounds.size.height;
+    }
+    return width;
+}
+
+#pragma mark - 导航栏渐变效果
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    int contentOffsety = scrollView.contentOffset.y;
+    
+    if (contentOffsety <= 170) {
+        self.NavView.headBgView.alpha = contentOffsety/170;
+//        self.NavView.rightImageView = @"Setting";
+        self.NavView.leftImageView = @"ic_black";
+        self.NavView.color = [UIColor whiteColor];
+    }else {
+        self.NavView.headBgView.alpha = 1;
+        self.NavView.headBgView.backgroundColor = kNavColor;
+//        self.NavView.rightImageView = @"Setting-click";
+        self.NavView.leftImageView = @"btn_back_white";
+        self.NavView.color = [UIColor whiteColor];
+    }
+    if (contentOffsety < 0) {
+        CGRect rect = _backgroundImgV.frame;
+        rect.size.height = _backImgHeight - contentOffsety;
+        rect.size.width = _backImgWidth * (_backImgHeight - contentOffsety)/_backImgHeight;
+        rect.origin.x = -(rect.size.width-_backImgWidth)/2;
+        rect.origin.y = 0;
+        _backgroundImgV.frame = rect;
+    }else {
+        CGRect rect = _backgroundImgV.frame;
+        rect.size.height = _backImgHeight;
+        rect.size.width = _backImgWidth;
+        rect.origin.x = 0;
+        rect.origin.y = -contentOffsety;
+        _backgroundImgV.frame = rect;
+    }
+}
+
+- (void)NavHeadToLeft {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+// 头像点击事件
+- (void)tapClick:(UITapGestureRecognizer *)recognizer {
+    NSLog(@"修改头像");
 }
 
 #pragma mark - 拉伸顶部图片
@@ -131,124 +238,9 @@
     self.NavView.title = @"资料详情";
     self.NavView.color = [UIColor whiteColor];
     self.NavView.leftImageView = @"ic_black";
-//    self.NavView.rightTitleImage = @"Setting";
+    //    self.NavView.rightTitleImage = @"Setting";
     self.NavView.delegate = self;
     [self.view addSubview:self.NavView];
-}
-
-
-- (void)NavHeadToLeft {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-// 右按钮回调
-- (void)NavHeadToRight {
-    NSLog(@"右");
-}
-// 头像点击事件
-- (void)tapClick:(UITapGestureRecognizer *)recognizer {
-    NSLog(@"修改头像");
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
-    return 1;
-}
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
-}
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (indexPath.row == 0) {
-        SXFiveScoreCell *cell = [SXFiveScoreCell cell];
-        
-        cell.scores = self.scores;
-//        cell.compareScores = self.compareScores;
-//        cell.labelNames = self.labelNames;
-        self.animateView = cell.scoreView;
-        
-        return cell;
-    }
-    
-    static NSString *ID = @"cell";
-    CircleFriendsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    
-    if (cell == nil) {
-        cell = [[CircleFriendsTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
-
-    cell.iconView.image = [UIImage imageNamed:@"liu1.jpg"];
-    cell.nameLable.text = @"夏茉";
-    cell.contentLabel.text = @"刘飞儿，女，2007年第四十七届国际小姐中国冠军、中华慈善总会授予“爱心使者”称号；香港中华环境保护志愿者协会“环保公益事业形象大使”。";
-    
-    NSArray *picImageNamesArray = @[ @"xiamo1.jpg",@"xiamo2.jpg",@"xiamo3.jpg",@"xiamo4.jpg",@"xiamo5.jpg",@"xiamo6.jpg",@"xiamo7.jpg",@"xiamo8.jpg",@"xiamo9.jpg"];
-    cell.picContainerView.picPathStringsArray = picImageNamesArray;
-    
-    // 此步设置用于实现cell的frame缓存，可以让tableview滑动更加流畅
-    [cell useCellFrameCacheWithIndexPath:indexPath tableView:tableView];
-    
-//    cell.model = self.dataArray[indexPath.row];
-    return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) {
-        return 200;
-    }
-    return 420;
-    // >>>>>>>>>>>>>>>>>>>>> * cell自适应 * >>>>>>>>>>>>>>>>>>>>>>>>
-//    id model = self.dataArray[indexPath.row];
-//    return [self.tableView cellHeightForIndexPath:indexPath model:model keyPath:@"model" cellClass:[CircleFriendsTableViewCell class] contentViewWidth:[self cellContentViewWith]];
-}
-
-- (CGFloat)cellContentViewWith
-{
-    CGFloat width = [UIScreen mainScreen].bounds.size.width;
-    
-    // 适配ios7横屏
-    if ([UIApplication sharedApplication].statusBarOrientation != UIInterfaceOrientationPortrait && [[UIDevice currentDevice].systemVersion floatValue] < 8) {
-        width = [UIScreen mainScreen].bounds.size.height;
-    }
-    return width;
-}
-
-#pragma mark - 导航栏渐变效果
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
-    int contentOffsety = scrollView.contentOffset.y;
-    
-    if (contentOffsety <= 170) {
-        self.NavView.headBgView.alpha = contentOffsety/170;
-//        self.NavView.rightImageView = @"Setting";
-        self.NavView.leftImageView = @"ic_black";
-        self.NavView.color = [UIColor whiteColor];
-        //状态栏字体白色
-        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
-    }else {
-        self.NavView.headBgView.alpha = 1;
-        self.NavView.headBgView.backgroundColor = kNavColor;
-//        self.NavView.rightImageView = @"Setting-click";
-        self.NavView.leftImageView = @"btn_back_white";
-        self.NavView.color = [UIColor whiteColor];
-        //隐藏黑线
-//        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
-        // 状态栏字体黑色
-        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    }
-    if (contentOffsety < 0) {
-        CGRect rect = _backgroundImgV.frame;
-        rect.size.height = _backImgHeight - contentOffsety;
-        rect.size.width = _backImgWidth * (_backImgHeight - contentOffsety)/_backImgHeight;
-        rect.origin.x = -(rect.size.width-_backImgWidth)/2;
-        rect.origin.y = 0;
-        _backgroundImgV.frame = rect;
-    }else {
-        CGRect rect = _backgroundImgV.frame;
-        rect.size.height = _backImgHeight;
-        rect.size.width = _backImgWidth;
-        rect.origin.x = 0;
-        rect.origin.y = -contentOffsety;
-        _backgroundImgV.frame = rect;
-    }
 }
 
 - (NSMutableArray *)dataArray {

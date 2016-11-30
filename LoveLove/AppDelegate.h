@@ -16,5 +16,9 @@
 @property (nonatomic, strong) ComTabBarController *tabBarController;
 @property (nonatomic, strong) ComNavigationController *nav;
 
+@property (copy, nonatomic) NSArray *sidArray;
+
++(AppDelegate *)shareAppDelegate;
+
 @end
 

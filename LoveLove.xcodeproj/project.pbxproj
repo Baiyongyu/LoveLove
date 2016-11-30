@@ -107,6 +107,17 @@
 		F38485C31DEE6476009C174E /* ComTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38485C11DEE6476009C174E /* ComTabBarController.m */; };
 		F38485C61DEE6DA9009C174E /* TouchWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F38485C51DEE6DA9009C174E /* TouchWindow.m */; };
 		F38485C91DEE6E0E009C174E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38485C81DEE6E0E009C174E /* ViewController.m */; };
+		F38485CD1DEEB047009C174E /* LoveLoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38485CC1DEEB047009C174E /* LoveLoveViewController.m */; };
+		F38485D01DEEB13E009C174E /* HotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38485CF1DEEB13E009C174E /* HotViewController.m */; };
+		F38485D31DEEB164009C174E /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38485D21DEEB164009C174E /* NewViewController.m */; };
+		F38485D81DEEB598009C174E /* WMPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F38485D51DEEB598009C174E /* WMPlayer.bundle */; };
+		F38485D91DEEB598009C174E /* WMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F38485D71DEEB598009C174E /* WMPlayer.m */; };
+		F38485E21DEEB612009C174E /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F38485DD1DEEB612009C174E /* DataManager.m */; };
+		F38485E31DEEB612009C174E /* SidModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F38485DF1DEEB612009C174E /* SidModel.m */; };
+		F38485E41DEEB612009C174E /* VideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F38485E11DEEB612009C174E /* VideoModel.m */; };
+		F38485E81DEEB679009C174E /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F38485E61DEEB679009C174E /* VideoCell.m */; };
+		F38485E91DEEB679009C174E /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F38485E71DEEB679009C174E /* VideoCell.xib */; };
+		F38485EC1DEEC4E1009C174E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38485EB1DEEC4E1009C174E /* DetailViewController.m */; };
 		F38D7DA21DEAC63A0066EA92 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = F38D7DA11DEAC63A0066EA92 /* FXBlurView.m */; };
 		F39265F31DE7D3B50064B8B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F39265F21DE7D3B50064B8B2 /* main.m */; };
 		F39265F61DE7D3B50064B8B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F39265F51DE7D3B50064B8B2 /* AppDelegate.m */; };
@@ -233,7 +244,6 @@
 		F35FE54D1DE91D7100766944 /* MemoryTimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryTimeModel.m; sourceTree = "<group>"; };
 		F35FE54F1DE91F8D00766944 /* MBProgressHUD+QM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+QM.h"; sourceTree = "<group>"; };
 		F35FE5501DE91F8D00766944 /* MBProgressHUD+QM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+QM.m"; sourceTree = "<group>"; };
-		F35FE5511DE91F8D00766944 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F35FE5541DE92C6000766944 /* WaterList1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WaterList1.plist; sourceTree = "<group>"; };
 		F35FE5551DE92C6000766944 /* HomeWaterImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeWaterImage.h; sourceTree = "<group>"; };
 		F35FE5561DE92C6000766944 /* HomeWaterImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeWaterImage.m; sourceTree = "<group>"; };
@@ -275,6 +285,26 @@
 		F38485C51DEE6DA9009C174E /* TouchWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchWindow.m; sourceTree = "<group>"; };
 		F38485C71DEE6E0E009C174E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F38485C81DEE6E0E009C174E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F38485CB1DEEB047009C174E /* LoveLoveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoveLoveViewController.h; sourceTree = "<group>"; };
+		F38485CC1DEEB047009C174E /* LoveLoveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoveLoveViewController.m; sourceTree = "<group>"; };
+		F38485CE1DEEB13E009C174E /* HotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotViewController.h; sourceTree = "<group>"; };
+		F38485CF1DEEB13E009C174E /* HotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotViewController.m; sourceTree = "<group>"; };
+		F38485D11DEEB164009C174E /* NewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
+		F38485D21DEEB164009C174E /* NewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
+		F38485D51DEEB598009C174E /* WMPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WMPlayer.bundle; sourceTree = "<group>"; };
+		F38485D61DEEB598009C174E /* WMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlayer.h; sourceTree = "<group>"; };
+		F38485D71DEEB598009C174E /* WMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayer.m; sourceTree = "<group>"; };
+		F38485DC1DEEB612009C174E /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		F38485DD1DEEB612009C174E /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		F38485DE1DEEB612009C174E /* SidModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidModel.h; sourceTree = "<group>"; };
+		F38485DF1DEEB612009C174E /* SidModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidModel.m; sourceTree = "<group>"; };
+		F38485E01DEEB612009C174E /* VideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoModel.h; sourceTree = "<group>"; };
+		F38485E11DEEB612009C174E /* VideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoModel.m; sourceTree = "<group>"; };
+		F38485E51DEEB679009C174E /* VideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
+		F38485E61DEEB679009C174E /* VideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
+		F38485E71DEEB679009C174E /* VideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
+		F38485EA1DEEC4E1009C174E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		F38485EB1DEEC4E1009C174E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		F38D7DA01DEAC63A0066EA92 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
 		F38D7DA11DEAC63A0066EA92 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 		F39265EE1DE7D3B50064B8B2 /* LoveLove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveLove.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -546,6 +576,48 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		F38485CA1DEEAC76009C174E /* Love */ = {
+			isa = PBXGroup;
+			children = (
+				F38485DB1DEEB608009C174E /* DataManager */,
+				F38485CB1DEEB047009C174E /* LoveLoveViewController.h */,
+				F38485CC1DEEB047009C174E /* LoveLoveViewController.m */,
+				F38485CE1DEEB13E009C174E /* HotViewController.h */,
+				F38485CF1DEEB13E009C174E /* HotViewController.m */,
+				F38485D11DEEB164009C174E /* NewViewController.h */,
+				F38485D21DEEB164009C174E /* NewViewController.m */,
+				F38485EA1DEEC4E1009C174E /* DetailViewController.h */,
+				F38485EB1DEEC4E1009C174E /* DetailViewController.m */,
+				F38485E51DEEB679009C174E /* VideoCell.h */,
+				F38485E61DEEB679009C174E /* VideoCell.m */,
+				F38485E71DEEB679009C174E /* VideoCell.xib */,
+			);
+			path = Love;
+			sourceTree = "<group>";
+		};
+		F38485D41DEEB598009C174E /* WMPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				F38485D51DEEB598009C174E /* WMPlayer.bundle */,
+				F38485D61DEEB598009C174E /* WMPlayer.h */,
+				F38485D71DEEB598009C174E /* WMPlayer.m */,
+			);
+			path = WMPlayer;
+			sourceTree = "<group>";
+		};
+		F38485DB1DEEB608009C174E /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				F38485DC1DEEB612009C174E /* DataManager.h */,
+				F38485DD1DEEB612009C174E /* DataManager.m */,
+				F38485DE1DEEB612009C174E /* SidModel.h */,
+				F38485DF1DEEB612009C174E /* SidModel.m */,
+				F38485E01DEEB612009C174E /* VideoModel.h */,
+				F38485E11DEEB612009C174E /* VideoModel.m */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		F39265E51DE7D3B50064B8B2 = {
 			isa = PBXGroup;
 			children = (
@@ -569,6 +641,7 @@
 			children = (
 				F39265F41DE7D3B50064B8B2 /* AppDelegate.h */,
 				F39265F51DE7D3B50064B8B2 /* AppDelegate.m */,
+				F39265FD1DE7D3B50064B8B2 /* Assets.xcassets */,
 				F3F9AA541DED3F0A006E48D2 /* Model.db */,
 				F35FE5711DE976B000766944 /* Resources */,
 				F39266421DE7E8A70064B8B2 /* Modules */,
@@ -598,7 +671,6 @@
 				F38485C71DEE6E0E009C174E /* ViewController.h */,
 				F38485C81DEE6E0E009C174E /* ViewController.m */,
 				F39265FA1DE7D3B50064B8B2 /* Main.storyboard */,
-				F39265FD1DE7D3B50064B8B2 /* Assets.xcassets */,
 				F39265FF1DE7D3B50064B8B2 /* LaunchScreen.storyboard */,
 				F39266021DE7D3B50064B8B2 /* Info.plist */,
 			);
@@ -612,7 +684,6 @@
 				F35A6E861DEBD2240040D81D /* NSObject+Property.m */,
 				F35FE54F1DE91F8D00766944 /* MBProgressHUD+QM.h */,
 				F35FE5501DE91F8D00766944 /* MBProgressHUD+QM.m */,
-				F35FE5511DE91F8D00766944 /* PrefixHeader.pch */,
 				F35FE5491DE91D3500766944 /* UIView+UIViewFrame.h */,
 				F35FE54A1DE91D3500766944 /* UIView+UIViewFrame.m */,
 				F37E077C1DE85F0D00845118 /* UIAlertController+Blocks.h */,
@@ -646,6 +717,7 @@
 				F38485BD1DEE6476009C174E /* Main */,
 				F39266431DE7E8A70064B8B2 /* Base */,
 				F392664D1DE7E8A70064B8B2 /* Home */,
+				F38485CA1DEEAC76009C174E /* Love */,
 				F392664A1DE7E8A70064B8B2 /* Center */,
 			);
 			path = Modules;
@@ -694,6 +766,7 @@
 		F39266A21DE811CF0064B8B2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F38485D41DEEB598009C174E /* WMPlayer */,
 				F38485C41DEE6DA9009C174E /* TouchWindow.h */,
 				F38485C51DEE6DA9009C174E /* TouchWindow.m */,
 				F38D7DA01DEAC63A0066EA92 /* FXBlurView.h */,
@@ -719,9 +792,9 @@
 			children = (
 				F3F9AA6F1DED5566006E48D2 /* PersonCenterViewController.h */,
 				F3F9AA701DED5566006E48D2 /* PersonCenterViewController.m */,
-				F3F9AAB81DED6D25006E48D2 /* CircleFriends */,
-				F3F9AA741DED5599006E48D2 /* SXFiveScore */,
 				F3F9AA6A1DED5566006E48D2 /* NavHeader */,
+				F3F9AA741DED5599006E48D2 /* SXFiveScore */,
+				F3F9AAB81DED6D25006E48D2 /* CircleFriends */,
 			);
 			path = PersonCenter;
 			sourceTree = "<group>";
@@ -861,6 +934,7 @@
 				F30059341DEDD22B00DD5F35 /* xiamo19.jpg in Resources */,
 				F30059191DEDD22B00DD5F35 /* liu3.jpg in Resources */,
 				F30059221DEDD22B00DD5F35 /* liu38.jpg in Resources */,
+				F38485E91DEEB679009C174E /* VideoCell.xib in Resources */,
 				F30059351DEDD22B00DD5F35 /* xiamo2.jpg in Resources */,
 				F300593A1DEDD22B00DD5F35 /* xiamo6.jpg in Resources */,
 				F30059091DEDD22A00DD5F35 /* liu15.jpg in Resources */,
@@ -896,6 +970,7 @@
 				F300591D1DEDD22B00DD5F35 /* liu33.jpg in Resources */,
 				F300591E1DEDD22B00DD5F35 /* liu34.jpg in Resources */,
 				F35FE5701DE9717E00766944 /* WaterList2.plist in Resources */,
+				F38485D81DEEB598009C174E /* WMPlayer.bundle in Resources */,
 				F30059201DEDD22B00DD5F35 /* liu36.jpg in Resources */,
 				F300590E1DEDD22A00DD5F35 /* liu2.jpg in Resources */,
 				F300592F1DEDD22B00DD5F35 /* xiamo14.jpg in Resources */,
@@ -969,9 +1044,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F35A6EA31DEC2A350040D81D /* HomeHeaderView.m in Sources */,
+				F38485E21DEEB612009C174E /* DataManager.m in Sources */,
 				F35FE53C1DE91B5300766944 /* NSObject+PerformBlockAfterDelay.m in Sources */,
 				F37E077E1DE85F0D00845118 /* UIAlertController+Blocks.m in Sources */,
 				F38D7DA21DEAC63A0066EA92 /* FXBlurView.m in Sources */,
+				F38485E41DEEB612009C174E /* VideoModel.m in Sources */,
 				F35FE5631DE92CB800766944 /* WaterLayoutViewController.m in Sources */,
 				F35FE52D1DE91A3000766944 /* ComBaseTableViewController.m in Sources */,
 				F37E07921DE8673E00845118 /* TAAnimatedDotView.m in Sources */,
@@ -984,18 +1061,24 @@
 				F39266551DE7E8A70064B8B2 /* ComBaseViewController.m in Sources */,
 				F35FE5291DE9156500766944 /* QMNavigateCollectionViewCell.m in Sources */,
 				F39266AE1DE830DC0064B8B2 /* UIImageView+NetworkMonitor.m in Sources */,
+				F38485D01DEEB13E009C174E /* HotViewController.m in Sources */,
 				F3F9AA721DED5566006E48D2 /* NavHeadTitleView.m in Sources */,
 				F3F9AAC91DED710F006E48D2 /* SDWaitingView.m in Sources */,
 				F35FE56C1DE95E6600766944 /* ToViewTopButton.m in Sources */,
+				F38485D31DEEB164009C174E /* NewViewController.m in Sources */,
 				F37E07971DE8673E00845118 /* UIView+SDExtension.m in Sources */,
 				F39265F61DE7D3B50064B8B2 /* AppDelegate.m in Sources */,
+				F38485E31DEEB612009C174E /* SidModel.m in Sources */,
 				F37E07931DE8673E00845118 /* TADotView.m in Sources */,
 				F38485C21DEE6476009C174E /* ComNavigationController.m in Sources */,
 				F392665F1DE7E8E00064B8B2 /* FMDBManagers.m in Sources */,
+				F38485E81DEEB679009C174E /* VideoCell.m in Sources */,
+				F38485D91DEEB598009C174E /* WMPlayer.m in Sources */,
 				F37E07951DE8673E00845118 /* SDCollectionViewCell.m in Sources */,
 				F35A6E871DEBD2240040D81D /* NSObject+Property.m in Sources */,
 				F3F9AABB1DED6D25006E48D2 /* CircleFriendsTableViewCell.m in Sources */,
 				F35FE5601DE92C6100766944 /* WaterfallLayout.m in Sources */,
+				F38485EC1DEEC4E1009C174E /* DetailViewController.m in Sources */,
 				F35FE5A01DE989AB00766944 /* WebDetailsViewController.m in Sources */,
 				F35FE55D1DE92C6000766944 /* HomeWaterImage.m in Sources */,
 				F3F9AAC71DED710F006E48D2 /* SDBrowserImageView.m in Sources */,
@@ -1019,6 +1102,7 @@
 				F37E07911DE8673E00845118 /* TAAbstractDotView.m in Sources */,
 				F35FE54E1DE91D7100766944 /* MemoryTimeModel.m in Sources */,
 				F37E07961DE8673E00845118 /* SDCycleScrollView.m in Sources */,
+				F38485CD1DEEB047009C174E /* LoveLoveViewController.m in Sources */,
 				F35FE59D1DE9895800766944 /* ComWebViewController.m in Sources */,
 				F39266A91DE815EA0064B8B2 /* MyLoveViewController.m in Sources */,
 				F392665E1DE7E8E00064B8B2 /* AppModel.m in Sources */,

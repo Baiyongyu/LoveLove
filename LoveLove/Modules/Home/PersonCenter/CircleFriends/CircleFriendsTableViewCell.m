@@ -25,8 +25,17 @@ CGFloat maxContentLabelHeight = 0; // 根据具体font而定
     return self;
 }
 
+- (void)tapAvatarView:(UITapGestureRecognizer *)gesture {
+    if (self.photoTapBlock) {
+        self.photoTapBlock();
+    }
+}
 - (void)setup {
     _iconView = [UIImageView new];
+    _iconView.userInteractionEnabled = YES;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAvatarView:)];
+    [_iconView addGestureRecognizer:tap];
     
     _nameLable = [UILabel new];
     _nameLable.font = [UIFont systemFontOfSize:14];
@@ -81,8 +90,7 @@ CGFloat maxContentLabelHeight = 0; // 根据具体font而定
     .heightIs(15);
     [_timeLabel setSingleLineAutoResizeWithMaxWidth:200];
 }
-- (void)setModel:(SDTimeLineCellModel *)model
-{
+- (void)setModel:(SDTimeLineCellModel *)model {
     _model = model;
     
     _iconView.image = [UIImage imageNamed:model.iconName];
@@ -97,11 +105,6 @@ CGFloat maxContentLabelHeight = 0; // 根据具体font而定
     _picContainerView.sd_layout.topSpaceToView(_contentLabel, picContainerTopMargin);
     
     UIView *bottomView;
-    
-//    if (!model.commentItemsArray.count && !model.likeItemsArray.count) {
-//        bottomView = _timeLabel;
-//    }
-    
     [self setupAutoHeightWithBottomView:bottomView bottomMargin:15];
 }
 

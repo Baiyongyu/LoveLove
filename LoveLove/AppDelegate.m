@@ -23,7 +23,7 @@
     
     /** 指纹认证 */
     self.touchWindow = [[TouchWindow alloc] initWithFrame:self.window.frame];
-    [self.touchWindow show];
+//    [self.touchWindow show];
     
     /** 控制器 */
     self.tabBarController = [[ComTabBarController alloc] init];
@@ -68,5 +68,8 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
++(AppDelegate *)shareAppDelegate{
+    return (AppDelegate *) [UIApplication sharedApplication].delegate;
+}
 
 @end

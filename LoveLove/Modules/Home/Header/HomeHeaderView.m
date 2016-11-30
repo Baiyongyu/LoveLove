@@ -46,17 +46,36 @@ static NSString *headerViewIdentifier = @"hederview";
     return self;
 }
 
-- (UIImageView *)imageView {
-    if (!_imageView) {
-        _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
-        
-        _imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"xiamo%zi.jpg", 2 % 20]];
-        FXBlurView *blurView = [[FXBlurView alloc] initWithFrame:_imageView.bounds];
-        blurView.blurRadius = 10;
-        blurView.tintColor = [UIColor clearColor];
-        [_imageView addSubview:blurView];
+#pragma mark UIScrollViewDelegate
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    CGFloat offsetX = scrollView.contentOffset.x;
+    CGFloat width = self.lineLayout.itemSize.width + self.lineLayout.minimumLineSpacing;
+    NSInteger item = offsetX/width;
+    NSString *imageName1 = [NSString stringWithFormat:@"xiamo%zi.jpg", item % 20];
+    
+    WS(weakSelf);
+    [UIView animateWithDuration:0.5f animations:^{
+        weakSelf.imageView.image = [UIImage imageNamed:imageName1];
+    }];
+}
+
+#pragma mark UICollectionViewDatasoure
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 20;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    AlbumCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    NSString *imageName = [NSString stringWithFormat:@"xiamo%zi.jpg", indexPath.item % 20];
+    cell.imageView.image = [UIImage imageNamed:imageName];
+    
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (_delegate && [_delegate respondsToSelector:@selector(didSeletedViewItem:)]) {
+        [_delegate didSeletedViewItem:indexPath];
     }
-    return _imageView;
 }
 
 - (UICollectionView *)collectionView {
@@ -86,38 +105,16 @@ static NSString *headerViewIdentifier = @"hederview";
     return _collectionView;
 }
 
-#pragma mark -
-#pragma mark UIScrollViewDelegate
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    CGFloat offsetX = scrollView.contentOffset.x;
-    CGFloat width = self.lineLayout.itemSize.width + self.lineLayout.minimumLineSpacing;
-    NSInteger item = offsetX/width;
-    NSString *imageName1 = [NSString stringWithFormat:@"xiamo%zi.jpg", item % 20];
-    
-    WS(weakSelf);
-    [UIView animateWithDuration:0.5f animations:^{
-        weakSelf.imageView.image = [UIImage imageNamed:imageName1];
-    }];
-}
-
-#pragma mark -
-#pragma mark UICollectionViewDatasoure
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 20;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    AlbumCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    NSString *imageName = [NSString stringWithFormat:@"xiamo%zi.jpg", indexPath.item % 20];
-    cell.imageView.image = [UIImage imageNamed:imageName];
-    
-    return cell;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (_delegate && [_delegate respondsToSelector:@selector(didSeletedViewItem:)]) {
-        [_delegate didSeletedViewItem:indexPath];
+- (UIImageView *)imageView {
+    if (!_imageView) {
+        _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
+        
+        _imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"xiamo%zi.jpg", 2 % 20]];
+        FXBlurView *blurView = [[FXBlurView alloc] initWithFrame:_imageView.bounds];
+        blurView.blurRadius = 10;
+        blurView.tintColor = [UIColor clearColor];
+        [_imageView addSubview:blurView];
     }
+    return _imageView;
 }
-
 @end

@@ -11,5 +11,6 @@ pod 'Masonry', '~> 1.0.0'
 pod 'SDAutoLayout', '~> 2.1.7'
 pod 'MBProgressHUD', '~> 0.9.2'
 pod 'MJExtension', '~> 3.0.13'
+pod 'WMPageController', '~> 2.0.2'
 
 end

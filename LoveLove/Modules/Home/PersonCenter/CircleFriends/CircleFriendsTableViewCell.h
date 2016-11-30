@@ -10,15 +10,21 @@
 
 #import "SDTimeLineCellModel.h"
 #import "SDWeiXinPhotoContainerView.h"
+
+/** 图片block */
+typedef void(^PhotoTapBlock)();
+
+
 @interface CircleFriendsTableViewCell : UITableViewCell
 @property (nonatomic, strong) SDTimeLineCellModel *model;
 @property (nonatomic, strong) NSIndexPath *indexPath;
-
 
 @property (nonatomic, strong) UIImageView *iconView;
 @property (nonatomic, strong) UILabel *nameLable;
 @property (nonatomic, strong) UILabel *contentLabel;
 @property (nonatomic, strong) SDWeiXinPhotoContainerView *picContainerView;
 @property (nonatomic, strong) UILabel *timeLabel;
+
+@property (nonatomic,copy) PhotoTapBlock photoTapBlock;
 
 @end

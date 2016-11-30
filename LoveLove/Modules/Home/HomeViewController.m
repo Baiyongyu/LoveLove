@@ -18,9 +18,14 @@
 #import "ComWebViewController.h"
 @interface HomeViewController () <SDCycleScrollViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UIScrollViewDelegate,DidSeletedViewItemDelegate>
 
+/** 背景 */
 @property (nonatomic, strong) UIView *bgView;
+/** banner */
+@property (nonatomic, strong) SDCycleScrollView *cycleScrollView;
 /** collevtionView */
 @property (nonatomic, strong) UICollectionView *collectionView;
+
+
 @property (nonatomic, strong) MemeoryTimeTableViewController *memoryTimeTableVC;
 @property (nonatomic, strong) HomeHeaderView *headerView;
 
@@ -39,37 +44,33 @@
     [self.contentView addSubview:self.memoryTimeTableVC.view];
 }
 
-
 - (void)layoutConstraints {
     
-
-    /***************************背景视图*****************************/
-    self.bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 268 + 88 + 300 + 30)];
+    /***************************头视图-背景View*****************************/
+    self.bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 160 + 88 + 300)];
     self.bgView.backgroundColor = [UIColor clearColor];
     [self.contentView addSubview:self.bgView];
-    
-    
     /***************************ScrollView*****************************/
-    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(10, 10, SCREEN_WIDTH - 20, 160) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
-    cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleClassic;
-    cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
-    cycleScrollView.autoScrollTimeInterval = 3;
-    cycleScrollView.layer.cornerRadius = 5.0f;
-    cycleScrollView.layer.masksToBounds = YES;
+    self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(10, 10, SCREEN_WIDTH - 20, 160) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    self.cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleClassic;
+    self.cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
+    self.cycleScrollView.autoScrollTimeInterval = 3;
+    self.cycleScrollView.layer.cornerRadius = 5.0f;
+    self.cycleScrollView.layer.masksToBounds = YES;
     
     NSArray *imgArray = @[@"http://img.zngirls.com/gallery/21337/17758/003.jpg",
                           @"http://img.zngirls.com/gallery/19705/19815/004.jpg"];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        cycleScrollView.imageURLStringsGroup = imgArray;
+        self.cycleScrollView.imageURLStringsGroup = imgArray;
     });
-    cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
-    [self.bgView addSubview:cycleScrollView];
+    self.cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
+    [self.bgView addSubview:self.cycleScrollView];
     
     
     /***************************CollectionView*****************************/
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(cycleScrollView.frame), SCREEN_WIDTH, 88) collectionViewLayout:layout];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.cycleScrollView.frame), SCREEN_WIDTH, 88) collectionViewLayout:layout];
     self.collectionView.backgroundColor = [UIColor clearColor];
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     layout.itemSize = CGSizeMake(SCREEN_WIDTH/4, 88);
@@ -83,12 +84,12 @@
     [self.collectionView registerNib:[UINib nibWithNibName:@"QMNavigateCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"NavCell"];
     [self.bgView addSubview:self.collectionView];
     
-    
     /***************************卡片式浏览*****************************/
     self.headerView = [[HomeHeaderView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.collectionView.frame), SCREEN_WIDTH, 300)];
     self.headerView.backgroundColor = [UIColor clearColor];
     self.headerView.delegate = self;
     [self.bgView addSubview:self.headerView];
+    
     
     /**************************MemoryTimeTableVC*****************************/
     WS(weakSelf);
@@ -96,6 +97,7 @@
         make.edges.equalTo(weakSelf.view).insets(UIEdgeInsetsMake(64, 0, 49, 0));
     }];
     self.memoryTimeTableVC.tableView.tableHeaderView = self.bgView;
+    
     
     /***************************回到顶部*****************************/
     ToViewTopButton *topButton = [[ToViewTopButton alloc] initWithFrame:CGRectZero scrollView:(UIScrollView *)self.memoryTimeTableVC.view];
@@ -271,6 +273,8 @@
     [self.memoryTimeTableVC loadDataFail];
 }
 
+
+#pragma mark - TimeVC
 - (MemeoryTimeTableViewController *)memoryTimeTableVC {
     if (!_memoryTimeTableVC) {
         _memoryTimeTableVC = [[MemeoryTimeTableViewController alloc] initWithStyle:UITableViewStylePlain];

@@ -73,7 +73,7 @@
         NSLog(@"Yeah,Support touch ID");
         
         //if return yes,whether your fingerprint correct.
-        [_context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"请按下指纹,进入爱爱" reply:^(BOOL success, NSError * _Nullable error) {
+        [_context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"请按下指纹,开始爱爱吧！" reply:^(BOOL success, NSError * _Nullable error) {
             if (success)
             {
                 [self imageViewShowAnimation];
