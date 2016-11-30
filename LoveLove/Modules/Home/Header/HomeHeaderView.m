@@ -50,7 +50,7 @@ static NSString *headerViewIdentifier = @"hederview";
     if (!_imageView) {
         _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
         
-        _imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"p%zi.jpg", 1 % 20]];
+        _imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"xiamo%zi.jpg", 2 % 20]];
         FXBlurView *blurView = [[FXBlurView alloc] initWithFrame:_imageView.bounds];
         blurView.blurRadius = 10;
         blurView.tintColor = [UIColor clearColor];
@@ -62,7 +62,7 @@ static NSString *headerViewIdentifier = @"hederview";
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
         _lineLayout = [[AlbumCollectionViewLineLayout alloc] init];
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 30, SCREEN_WIDTH, 300)
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 300)
                                              collectionViewLayout:_lineLayout];
         
         _lineLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
@@ -79,7 +79,7 @@ static NSString *headerViewIdentifier = @"hederview";
         [_collectionView registerClass:[AlbumCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
         [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerViewIdentifier];
         
-        [_collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:0]
+        [_collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:2 inSection:0]
                                 atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally
                                         animated:YES];
     }
@@ -92,10 +92,10 @@ static NSString *headerViewIdentifier = @"hederview";
     CGFloat offsetX = scrollView.contentOffset.x;
     CGFloat width = self.lineLayout.itemSize.width + self.lineLayout.minimumLineSpacing;
     NSInteger item = offsetX/width;
-    NSString *imageName1 = [NSString stringWithFormat:@"p%zi.jpg", item%20];
+    NSString *imageName1 = [NSString stringWithFormat:@"xiamo%zi.jpg", item % 20];
     
     WS(weakSelf);
-    [UIView animateWithDuration:.5f animations:^{
+    [UIView animateWithDuration:0.5f animations:^{
         weakSelf.imageView.image = [UIImage imageNamed:imageName1];
     }];
 }
@@ -108,7 +108,7 @@ static NSString *headerViewIdentifier = @"hederview";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     AlbumCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    NSString *imageName = [NSString stringWithFormat:@"p%zi.jpg", indexPath.item % 20];
+    NSString *imageName = [NSString stringWithFormat:@"xiamo%zi.jpg", indexPath.item % 20];
     cell.imageView.image = [UIImage imageNamed:imageName];
     
     return cell;

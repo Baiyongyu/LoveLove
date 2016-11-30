@@ -15,6 +15,7 @@
 #import "MemeoryTimeTableViewController.h"  // 岁月
 #import "HomeHeaderView.h"
 #import "PersonCenterViewController.h"     // 个人资料详情
+#import "ComWebViewController.h"
 @interface HomeViewController () <SDCycleScrollViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UIScrollViewDelegate,DidSeletedViewItemDelegate>
 
 @property (nonatomic, strong) UIView *bgView;
@@ -41,16 +42,14 @@
 
 - (void)layoutConstraints {
     
-//    UIImageView *bgImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-//    bgImgView.image = [UIImage imageNamed:@"home_bkg_8_320x600_"];
-//    [self.contentView addSubview:bgImgView];
-    
-    // 背景视图
+
+    /***************************背景视图*****************************/
     self.bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 268 + 88 + 300 + 30)];
-    self.bgView.backgroundColor = kDefaultViewBackgroundColor;
+    self.bgView.backgroundColor = [UIColor clearColor];
     [self.contentView addSubview:self.bgView];
     
-    // ScrollView
+    
+    /***************************ScrollView*****************************/
     SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(10, 10, SCREEN_WIDTH - 20, 160) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
     cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleClassic;
     cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
@@ -59,7 +58,7 @@
     cycleScrollView.layer.masksToBounds = YES;
     
     NSArray *imgArray = @[@"http://img.zngirls.com/gallery/21337/17758/003.jpg",
-                          @"http://img.zngirls.com/gallery/19705/19815/s/008.jpg"];
+                          @"http://img.zngirls.com/gallery/19705/19815/004.jpg"];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         cycleScrollView.imageURLStringsGroup = imgArray;
@@ -68,12 +67,10 @@
     [self.bgView addSubview:cycleScrollView];
     
     
-    // CollectionView
-    
+    /***************************CollectionView*****************************/
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(cycleScrollView.frame), SCREEN_WIDTH, 88) collectionViewLayout:layout];
-    self.collectionView.backgroundColor = [UIColor whiteColor];
-    
+    self.collectionView.backgroundColor = [UIColor clearColor];
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     layout.itemSize = CGSizeMake(SCREEN_WIDTH/4, 88);
     layout.minimumLineSpacing = 1;
@@ -86,11 +83,12 @@
     [self.collectionView registerNib:[UINib nibWithNibName:@"QMNavigateCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"NavCell"];
     [self.bgView addSubview:self.collectionView];
     
-    self.headerView = [[HomeHeaderView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.collectionView.frame), SCREEN_WIDTH, 200)];
-    [self.bgView addSubview:self.headerView];
     
+    /***************************卡片式浏览*****************************/
+    self.headerView = [[HomeHeaderView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.collectionView.frame), SCREEN_WIDTH, 300)];
+    self.headerView.backgroundColor = [UIColor clearColor];
     self.headerView.delegate = self;
-    
+    [self.bgView addSubview:self.headerView];
     
     /**************************MemoryTimeTableVC*****************************/
     WS(weakSelf);
@@ -254,6 +252,13 @@
         height += 15;
     }
     happyData.contentHeight = height;
+}
+
+#pragma mark - SDCycleScrollViewDelegate
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
+    ComWebViewController *webVC = [[ComWebViewController alloc] init];
+    webVC.urlStr = @"http://www.zngirls.com/g/17807/";
+    [self.navigationController pushViewController:webVC animated:YES];
 }
 
 #pragma mark - ANTBaseTableViewControllerDelegate

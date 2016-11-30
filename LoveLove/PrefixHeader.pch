@@ -62,4 +62,7 @@
 
 #define XiHeiFont(fontSize) [UIFont systemFontOfSize:fontSize]
 
+
+#define kUSERPASSWORD @"116116"
+
 #endif /* PrefixHeader_pch */

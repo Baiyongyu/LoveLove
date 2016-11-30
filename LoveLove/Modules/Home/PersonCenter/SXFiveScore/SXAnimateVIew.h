@@ -1,9 +1,9 @@
 //
 //  SXAnimateVIew.h
-//  SXFiveScoreShow
+//  LoveLove
 //
-//  Created by dongshangxian on 15/5/26.
-//  Copyright (c) 2015年 Sankuai. All rights reserved.
+//  Created by 宇玄丶 on 2016/11/29.
+//  Copyright © 2016年 北京116科技有限公司. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

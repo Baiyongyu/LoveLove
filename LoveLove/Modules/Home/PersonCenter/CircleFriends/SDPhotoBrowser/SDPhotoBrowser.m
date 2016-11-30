@@ -95,7 +95,7 @@
     indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
     indicator.center = self.center;
     _indicatorView = indicator;
-    [[UIApplication sharedApplication].keyWindow addSubview:indicator];
+//    [[UIApplication sharedApplication].keyWindow addSubview:indicator];
     [indicator startAnimating];
 }
 

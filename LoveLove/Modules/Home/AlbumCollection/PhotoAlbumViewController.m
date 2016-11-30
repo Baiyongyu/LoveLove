@@ -22,6 +22,7 @@ static NSString *reuseIdentifier = @"Cell";
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) AlbumCollectionViewLineLayout *lineLayout;
 @property (nonatomic, assign) ItemSelectType ItemSelectType;
+@property (nonatomic, assign) NSUInteger photoCounts;
 
 
 @end
@@ -41,6 +42,13 @@ static NSString *reuseIdentifier = @"Cell";
     self.titleLabel.text = self.titles;
     self.leftBtn.hidden = NO;
     
+    if (self.ItemSelectType == ItemSelectTypeOne) {
+        self.photoCounts = 20;
+    }else if (self.ItemSelectType == ItemSelectTypeTwo) {
+        self.photoCounts = 39;
+    }
+    
+    
     [self.contentView addSubview:self.collectionView];
 }
 
@@ -50,7 +58,14 @@ static NSString *reuseIdentifier = @"Cell";
     if (!_imageView) {
         _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64)];
         
-        _imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"p%zi.jpg", 7 % 20]];
+        if (self.ItemSelectType == ItemSelectTypeOne) {
+            _imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"xiamo%zi.jpg", 1 % self.photoCounts]];
+        }
+        if (self.ItemSelectType == ItemSelectTypeTwo) {
+            _imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"liu%zi.jpg", 1 % self.photoCounts]];
+        }
+        
+        
         FXBlurView *blurView = [[FXBlurView alloc] initWithFrame:_imageView.bounds];
         blurView.blurRadius = 10;
         blurView.tintColor = [UIColor clearColor];
@@ -70,7 +85,7 @@ static NSString *reuseIdentifier = @"Cell";
         _collectionView.delegate = self;
         _collectionView.backgroundView = self.imageView;
         [_collectionView registerClass:[AlbumCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-        [_collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:7 inSection:0]
+        [_collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:0]
                                 atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally
                                         animated:YES];
     }
@@ -83,24 +98,36 @@ static NSString *reuseIdentifier = @"Cell";
     CGFloat offsetX = scrollView.contentOffset.x;
     CGFloat width = self.lineLayout.itemSize.width + self.lineLayout.minimumLineSpacing;
     NSInteger item = offsetX/width;
-    NSString *imageName1 = [NSString stringWithFormat:@"p%zi.jpg", item%20];
+//    NSString *imageName1 = [NSString stringWithFormat:@"xiamo%zi.jpg", item%20];
     
-    __weak typeof(self) weakSelf = self;
+    WS(weakSelf);
     [UIView animateWithDuration:.5f animations:^{
-        weakSelf.imageView.image = [UIImage imageNamed:imageName1];
+        
+        if (self.ItemSelectType == ItemSelectTypeOne) {
+            weakSelf.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"xiamo%zi.jpg", item % self.photoCounts]];
+        }else if (self.ItemSelectType == ItemSelectTypeTwo) {
+            weakSelf.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"liu%zi.jpg", item% self.photoCounts]];
+        }
+        
+        
+//        weakSelf.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"xiamo%zi.jpg", item%20]];
     }];
 }
 
-#pragma mark -
 #pragma mark UICollectionViewDatasoure
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 20;
+    return self.photoCounts;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     AlbumCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    NSString *imageName = [NSString stringWithFormat:@"p%zi.jpg", indexPath.item % 20];
-    cell.imageView.image = [UIImage imageNamed:imageName];
+//    NSString *imageName = [NSString stringWithFormat:@"xiamo%zi.jpg", indexPath.item % 20];
+    
+    if (self.ItemSelectType == ItemSelectTypeOne) {
+        cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"xiamo%zi.jpg", indexPath.item % self.photoCounts]];
+    }else if (self.ItemSelectType == ItemSelectTypeTwo) {
+        cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"liu%zi.jpg", indexPath.item % self.photoCounts]];
+    }
     
     return cell;
 }

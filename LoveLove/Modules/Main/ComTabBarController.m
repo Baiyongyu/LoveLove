@@ -8,7 +8,6 @@
 
 #import "ComTabBarController.h"
 #import "HomeViewController.h"
-#import "LinkPageViewController.h"
 #import "CenterViewController.h"
 
 @interface ComTabBarController ()
@@ -26,11 +25,6 @@
         homeVC.tabBarItem.image = [UIImage imageNamed:@"ln_tab_timeline_25x19_"];
         homeVC.tabBarItem.selectedImage = [UIImage imageNamed:@"ln_tab_timeline_25x19_"];
         
-        LinkPageViewController *linkVC = [[LinkPageViewController alloc] init];
-        linkVC.tabBarItem.title = @"联动";
-        linkVC.tabBarItem.image = [UIImage imageNamed:@"ln_tab_chat_32x19_"];
-        linkVC.tabBarItem.selectedImage = [UIImage imageNamed:@"ln_tab_chat_32x19_"];
-        
         // 中心
         CenterViewController *centerVC = [[CenterViewController alloc] init];
         centerVC.tabBarItem.title = @"中心";
@@ -38,7 +32,7 @@
         centerVC.tabBarItem.selectedImage = [UIImage imageNamed:@"ln_tab_index_22x19_"];
 
         self.tabBar.tintColor = kNavColor;
-        self.viewControllers = @[homeVC, linkVC, centerVC];
+        self.viewControllers = @[homeVC, centerVC];
     }
     return self;
 }

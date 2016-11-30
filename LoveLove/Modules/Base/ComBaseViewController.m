@@ -19,9 +19,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    UIImageView *bgImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-//    bgImgView.image = [UIImage imageNamed:@"home_bkg_8_320x600_"];
-//    [self.view addSubview:bgImgView];
+    UIImageView *bgImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    bgImgView.image = [UIImage imageNamed:@"home_bkg_8_320x600_"];
+    [self.view addSubview:bgImgView];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = kDefaultViewBackgroundColor;

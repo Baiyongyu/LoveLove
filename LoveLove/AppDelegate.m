@@ -7,9 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "TouchWindow.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) TouchWindow *touchWindow;
 @end
 
 @implementation AppDelegate
@@ -19,16 +20,25 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
     
+    /** 指纹认证 */
+    self.touchWindow = [[TouchWindow alloc] initWithFrame:self.window.frame];
+    [self.touchWindow show];
     
+    /** 控制器 */
     self.tabBarController = [[ComTabBarController alloc] init];
     self.nav = [[ComNavigationController alloc] initWithRootViewController:self.tabBarController];
     self.nav.navigationBar.hidden = YES;
     self.window.rootViewController = self.nav;
     
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
     return YES;
+}
+
+- (void)enterForeground {
+    NSLog(@"YES");
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -45,6 +55,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    [self.touchWindow show];
 }
 
 

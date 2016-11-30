@@ -63,8 +63,11 @@
     }
     AppModel *model = self.dataSource[indexPath.row];
     
-    [cell ShowImage:model.image nameNV:[NSString stringWithFormat:@"p%d.jpg",self.index]];
-    
+    if ([self.titles isEqualToString:@"夏茉"]) {
+        [cell ShowImage:model.image nameNV:[NSString stringWithFormat:@"xiamo%d.jpg",self.index]];
+    }else if ([self.titles isEqualToString:@"刘飞儿"]) {
+        [cell ShowImage:model.image nameNV:[NSString stringWithFormat:@"liu%d.jpg",self.index]];
+    }
     return cell;
 }
 

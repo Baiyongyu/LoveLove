@@ -3,7 +3,7 @@
 //  LoveLove
 //
 //  Created by 宇玄丶 on 2016/11/29.
-//  Copyright © 2016年 宇玄丶. All rights reserved.
+//  Copyright © 2016年 北京116科技有限公司. All rights reserved.
 //
 
 #import "PersonCenterViewController.h"
@@ -58,52 +58,6 @@
     [self createNav];
     // 创建TableView
     [self createTableView];
-    
-//    [self.dataArray addObjectsFromArray:[self creatModelsWithCount:1]];
-    
-    
-}
-
-
-- (NSArray *)creatModelsWithCount:(NSInteger)count
-{
-    NSArray *iconImageNamesArray = @[@"p1.jpg"];
-    
-    NSArray *namesArray = @[@"GSD_iOS"];
-    
-    NSArray *textArray = @[@"当你的 app 没有提供 3x 的 LaunchImage 时，系统默认进入兼容模式，https://github.com/gsdios/SDAutoLayout大屏幕一切按照 320 宽度渲染，屏幕宽度返回 320；然后等比例拉伸到大屏。这种情况下对界面不会产生任何影响，等于把小屏完全拉伸。"];
-    
-
-    
-    NSArray *picImageNamesArray = @[ @"p1.jpg",@"p2.jpg",@"p3.jpg",@"p4.jpg",@"p5.jpg",@"p6.jpg",@"p7.jpg",@"p8.jpg",@"p9.jpg"];
-    NSMutableArray *resArr = [NSMutableArray new];
-    
-    for (int i = 0; i < count; i++) {
-        int iconRandomIndex = (1);
-        int nameRandomIndex = (1);
-        int contentRandomIndex = (1);
-        
-        SDTimeLineCellModel *model = [SDTimeLineCellModel new];
-//        model.iconName = iconImageNamesArray[iconRandomIndex];
-//        model.name = namesArray[nameRandomIndex];
-//        model.msgContent = textArray[contentRandomIndex];
-        
-        
-        // 模拟“随机图片”
-        int random = (9);
-        
-        NSMutableArray *temp = [NSMutableArray new];
-        for (int i = 0; i < random; i++) {
-            int randomIndex = (9);
-            [temp addObject:picImageNamesArray[randomIndex]];
-        }
-        if (temp.count) {
-            model.picNamesArray = [temp copy];
-        }
-        
-        [resArr addObject:model];
-    }
-    return [resArr copy];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -116,7 +70,7 @@
 #pragma mark - 拉伸顶部图片
 - (void)lashenBgView {
     
-    _backgroundImgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 180)];
+    _backgroundImgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
     [_backgroundImgV sd_setImageWithURL:[NSURL URLWithString:@"http://img.zngirls.com/gallery/21337/17758/003.jpg"] placeholderImage:[UIImage imageNamed:@"placeholder"]];
     _backgroundImgV.userInteractionEnabled = YES;
     _backImgHeight = _backgroundImgV.frame.size.height;
@@ -149,7 +103,7 @@
         // 头像
         _headerImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_headerView.frame) - 40, 100, 100)];
         _headerImg.center = CGPointMake(SCREEN_WIDTH/2, 100);
-        [_headerImg setImage:[UIImage imageNamed:@"p10.jpg"]];
+        [_headerImg setImage:[UIImage imageNamed:@"xiamo10.jpg"]];
         _headerImg.contentMode = UIViewContentModeScaleToFill;
         [_headerImg.layer setMasksToBounds:YES];
         [_headerImg.layer setCornerRadius:2.0f];
@@ -176,7 +130,7 @@
     self.NavView = [[NavHeadTitleView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 64)];
     self.NavView.title = @"资料详情";
     self.NavView.color = [UIColor whiteColor];
-    self.NavView.leftImageView = @"back";
+    self.NavView.leftImageView = @"ic_black";
 //    self.NavView.rightTitleImage = @"Setting";
     self.NavView.delegate = self;
     [self.view addSubview:self.NavView];
@@ -219,39 +173,18 @@
     CircleFriendsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     
     if (cell == nil) {
-        
         cell = [[CircleFriendsTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
     }
-    
-    
-//    CircleFriendsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTimeLineTableViewCellId];
-    
-    cell.iconView.image = [UIImage imageNamed:@"p1.jpg"];
+
+    cell.iconView.image = [UIImage imageNamed:@"liu1.jpg"];
     cell.nameLable.text = @"夏茉";
     cell.contentLabel.text = @"刘飞儿，女，2007年第四十七届国际小姐中国冠军、中华慈善总会授予“爱心使者”称号；香港中华环境保护志愿者协会“环保公益事业形象大使”。";
     
-    NSArray *picImageNamesArray = @[ @"p1.jpg",@"p2.jpg",@"p3.jpg",@"p4.jpg",@"p5.jpg",@"p6.jpg",@"p7.jpg",@"p8.jpg",@"p9.jpg"];
+    NSArray *picImageNamesArray = @[ @"xiamo1.jpg",@"xiamo2.jpg",@"xiamo3.jpg",@"xiamo4.jpg",@"xiamo5.jpg",@"xiamo6.jpg",@"xiamo7.jpg",@"xiamo8.jpg",@"xiamo9.jpg"];
     cell.picContainerView.picPathStringsArray = picImageNamesArray;
     
-    
-//    cell.indexPath = indexPath;
-    
-    
-//    __weak typeof(self) weakSelf = self;
-//    if (!cell.moreButtonClickedBlock) {
-//        [cell setMoreButtonClickedBlock:^(NSIndexPath *indexPath) {
-//            SDTimeLineCellModel *model = weakSelf.dataArray[indexPath.row];
-//            model.isOpening = !model.isOpening;
-//            [weakSelf.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-//        }];
-//        cell.delegate = self;
-//    }
-    
-    ////// 此步设置用于实现cell的frame缓存，可以让tableview滑动更加流畅 //////
-    
-//    [cell useCellFrameCacheWithIndexPath:indexPath tableView:tableView];
-    
-    ///////////////////////////////////////////////////////////////////////
+    // 此步设置用于实现cell的frame缓存，可以让tableview滑动更加流畅
+    [cell useCellFrameCacheWithIndexPath:indexPath tableView:tableView];
     
 //    cell.model = self.dataArray[indexPath.row];
     return cell;
@@ -283,18 +216,21 @@
     
     int contentOffsety = scrollView.contentOffset.y;
     
-    if (scrollView.contentOffset.y <= 170) {
-        self.NavView.headBgView.alpha = scrollView.contentOffset.y/170;
+    if (contentOffsety <= 170) {
+        self.NavView.headBgView.alpha = contentOffsety/170;
 //        self.NavView.rightImageView = @"Setting";
+        self.NavView.leftImageView = @"ic_black";
         self.NavView.color = [UIColor whiteColor];
         //状态栏字体白色
         [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
     }else {
         self.NavView.headBgView.alpha = 1;
+        self.NavView.headBgView.backgroundColor = kNavColor;
 //        self.NavView.rightImageView = @"Setting-click";
-        self.NavView.color = kNavColor;
+        self.NavView.leftImageView = @"btn_back_white";
+        self.NavView.color = [UIColor whiteColor];
         //隐藏黑线
-        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+//        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
         // 状态栏字体黑色
         [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     }
