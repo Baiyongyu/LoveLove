@@ -100,7 +100,7 @@
     
     
     /***************************回到顶部*****************************/
-    ToViewTopButton *topButton = [[ToViewTopButton alloc] initWithFrame:CGRectZero scrollView:(UIScrollView *)self.memoryTimeTableVC.view];
+    ToViewTopButton *topButton = [[ToViewTopButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 50, SCREEN_HEIGHT - kNavbarHeight - kTabBarHeight, 40, 40) scrollView:(UIScrollView *)self.memoryTimeTableVC.view];
     topButton.showBtnOffset = 350;
     [self.view addSubview:topButton];
 }

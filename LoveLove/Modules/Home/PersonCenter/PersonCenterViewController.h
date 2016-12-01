@@ -15,4 +15,6 @@
 @property(nonatomic,strong)NSArray *labelNames;
 /** 各项用来做参照物（对比）的分数*/
 @property(nonatomic,strong)NSArray *compareScores;
+
+@property(nonatomic,copy) NSString *iconsId;
 @end

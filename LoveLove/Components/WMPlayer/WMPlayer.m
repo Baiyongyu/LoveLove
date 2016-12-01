@@ -263,7 +263,7 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
 #pragma mark - PlayOrPause
 - (void)PlayOrPause:(UIButton *)sender{
     if (self.durationTimer==nil) {
-        self.durationTimer = [NSTimer timerWithTimeInterval:0.2 target:self selector:@selector(finishedPlay:) userInfo:nil repeats:YES];
+        self.durationTimer = [NSTimer timerWithTimeInterval:0.0 target:self selector:@selector(finishedPlay:) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop] addTimer:self.durationTimer forMode:NSDefaultRunLoopMode];
     }
     sender.selected = !sender.selected;

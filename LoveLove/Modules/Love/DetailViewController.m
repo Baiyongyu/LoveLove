@@ -13,6 +13,8 @@
     CGRect playerFrame;
 }
 
+@property(nonatomic,strong)UILabel *titleLabel;
+
 @end
 
 @implementation DetailViewController
@@ -93,7 +95,9 @@
         
     }];
 }
--(void)fullScreenBtnClick:(NSNotification *)notice{
+
+#pragma mark - 全屏播放点击事件
+- (void)fullScreenBtnClick:(NSNotification *)notice{
     UIButton *fullScreenBtn = (UIButton *)[notice object];
     if (fullScreenBtn.isSelected) {//全屏显示
         [self toFullScreenWithInterfaceOrientation:UIInterfaceOrientationLandscapeLeft];
@@ -144,7 +148,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    
+    self.view.backgroundColor = kNavColor;
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    
+    [self backButton];
+    
+    [self navigationTitle];
+    
+    
+//    self.view.backgroundColor = [UIColor whiteColor];
     playerFrame = CGRectMake(0, 64, self.view.frame.size.width, (self.view.frame.size.width)*3/4);
     wmPlayer = [[WMPlayer alloc]initWithFrame:playerFrame videoURLStr:self.URLString];
     wmPlayer.closeBtn.hidden = YES;
@@ -156,6 +170,32 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)backButton {
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    backButton.frame = CGRectMake(0, 25, 50, 30);
+    [backButton setImage:[UIImage imageNamed:@"btn_back_white"] forState:UIControlStateNormal];
+    [backButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:backButton];
+}
+
+- (void)backAction {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)navigationTitle {
+    _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - 80)/2, 20, 80, 40)];
+    _titleLabel.text = @"视频详情";
+    _titleLabel.font = XiHeiFont(18);
+    _titleLabel.textColor = [UIColor whiteColor];
+    _titleLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:_titleLabel];
+}
+
+
+
 -(void)releaseWMPlayer{
     [wmPlayer.player.currentItem cancelPendingSeeks];
     [wmPlayer.player.currentItem.asset cancelLoading];

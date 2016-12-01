@@ -9,15 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "VideoModel.h"
 
+typedef void (^IconActionBlock)();
+
 @interface VideoCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *backgroundIV;
-@property (weak, nonatomic) IBOutlet UILabel *timeDurationLabel;
-@property (weak, nonatomic) IBOutlet UILabel *countLabel;
-@property (weak, nonatomic) IBOutlet UIButton *playBtn;
 
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundIV;
+@property (weak, nonatomic) IBOutlet UIButton *playBtn;
+@property (weak, nonatomic) IBOutlet UIButton *shareBtn;
+@property (weak, nonatomic) IBOutlet UIButton *iconBtn;
 @property (nonatomic, retain)VideoModel *model;
+
+@property (nonatomic, copy) IconActionBlock iconActionBlock;
 
 @end
