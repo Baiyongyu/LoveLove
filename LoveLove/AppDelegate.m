@@ -21,8 +21,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     /** 指纹认证 */
-    self.touchWindow = [[TouchWindow alloc] initWithFrame:self.window.frame];
-    [self.touchWindow show];
+//    self.touchWindow = [[TouchWindow alloc] initWithFrame:self.window.frame];
+//    [self.touchWindow show];
     
     /** 控制器 */
     self.tabBarController = [[ComTabBarController alloc] init];

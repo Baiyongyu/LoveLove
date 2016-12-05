@@ -34,7 +34,7 @@ static NSString *headerViewIdentifier = @"hederview";
         
         // 刚进入界面时动画展示
         CAKeyframeAnimation *popAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
-        popAnimation.duration = 0.25;
+        popAnimation.duration = 0.5;
         popAnimation.values = @[[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.1f, 0.1f, 1.0f)],
                                 [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0f, 1.0f, 1.0f)]];
         popAnimation.keyTimes = @[@0.2f, @1.0f];
