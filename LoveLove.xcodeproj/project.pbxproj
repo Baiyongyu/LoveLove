@@ -139,6 +139,7 @@
 		F392665F1DE7E8E00064B8B2 /* FMDBManagers.m in Sources */ = {isa = PBXBuildFile; fileRef = F392665D1DE7E8E00064B8B2 /* FMDBManagers.m */; };
 		F39266A91DE815EA0064B8B2 /* MyLoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F39266A81DE815EA0064B8B2 /* MyLoveViewController.m */; };
 		F39266AE1DE830DC0064B8B2 /* UIImageView+NetworkMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F39266AD1DE830DC0064B8B2 /* UIImageView+NetworkMonitor.m */; };
+		F3D6F3DF1DF55FD100B50F37 /* ComTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D6F3DE1DF55FD100B50F37 /* ComTableViewDelegate.m */; };
 		F3F9AA551DED3F0A006E48D2 /* Model.db in Resources */ = {isa = PBXBuildFile; fileRef = F3F9AA541DED3F0A006E48D2 /* Model.db */; };
 		F3F9AA711DED5566006E48D2 /* HeadImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F9AA6C1DED5566006E48D2 /* HeadImageView.m */; };
 		F3F9AA721DED5566006E48D2 /* NavHeadTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F9AA6E1DED5566006E48D2 /* NavHeadTitleView.m */; };
@@ -353,6 +354,8 @@
 		F39266A81DE815EA0064B8B2 /* MyLoveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLoveViewController.m; sourceTree = "<group>"; };
 		F39266AC1DE830DC0064B8B2 /* UIImageView+NetworkMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+NetworkMonitor.h"; sourceTree = "<group>"; };
 		F39266AD1DE830DC0064B8B2 /* UIImageView+NetworkMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+NetworkMonitor.m"; sourceTree = "<group>"; };
+		F3D6F3DD1DF55FD100B50F37 /* ComTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComTableViewDelegate.h; sourceTree = "<group>"; };
+		F3D6F3DE1DF55FD100B50F37 /* ComTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComTableViewDelegate.m; sourceTree = "<group>"; };
 		F3F9AA541DED3F0A006E48D2 /* Model.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Model.db; sourceTree = "<group>"; };
 		F3F9AA6B1DED5566006E48D2 /* HeadImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadImageView.h; sourceTree = "<group>"; };
 		F3F9AA6C1DED5566006E48D2 /* HeadImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadImageView.m; sourceTree = "<group>"; };
@@ -841,6 +844,8 @@
 		F39266A21DE811CF0064B8B2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F3D6F3DD1DF55FD100B50F37 /* ComTableViewDelegate.h */,
+				F3D6F3DE1DF55FD100B50F37 /* ComTableViewDelegate.m */,
 				F38485D41DEEB598009C174E /* WMPlayer */,
 				F38485C41DEE6DA9009C174E /* TouchWindow.h */,
 				F38485C51DEE6DA9009C174E /* TouchWindow.m */,
@@ -1158,6 +1163,7 @@
 				F3F9AABB1DED6D25006E48D2 /* CircleFriendsTableViewCell.m in Sources */,
 				F35FE5601DE92C6100766944 /* WaterfallLayout.m in Sources */,
 				F38485EC1DEEC4E1009C174E /* DetailViewController.m in Sources */,
+				F3D6F3DF1DF55FD100B50F37 /* ComTableViewDelegate.m in Sources */,
 				F38486141DEED3C3009C174E /* NoDataView.m in Sources */,
 				F35FE5A01DE989AB00766944 /* WebDetailsViewController.m in Sources */,
 				F35FE55D1DE92C6000766944 /* HomeWaterImage.m in Sources */,

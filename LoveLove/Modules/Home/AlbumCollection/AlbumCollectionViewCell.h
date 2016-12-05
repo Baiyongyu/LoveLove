@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AppModel.h"
 @interface AlbumCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) AppModel *appModel;
 
 @end

@@ -28,4 +28,10 @@
     return self;
 }
 
+- (void)setAppModel:(AppModel *)appModel {
+    _appModel = appModel;
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:appModel.image] placeholderImage:[UIImage imageNamed:@"placeholder"]];
+}
+
+
 @end

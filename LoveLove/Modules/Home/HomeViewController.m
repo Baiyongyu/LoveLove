@@ -25,10 +25,8 @@
 /** collevtionView */
 @property (nonatomic, strong) UICollectionView *collectionView;
 
-
 @property (nonatomic, strong) MemeoryTimeTableViewController *memoryTimeTableVC;
 @property (nonatomic, strong) HomeHeaderView *headerView;
-
 @end
 
 @implementation HomeViewController

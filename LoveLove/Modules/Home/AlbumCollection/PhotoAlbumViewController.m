@@ -47,11 +47,8 @@ static NSString *reuseIdentifier = @"Cell";
     }else if (self.ItemSelectType == ItemSelectTypeTwo) {
         self.photoCounts = 39;
     }
-    
-    
     [self.contentView addSubview:self.collectionView];
 }
-
 
 #pragma mark init methods
 - (UIImageView *)imageView {
@@ -64,7 +61,6 @@ static NSString *reuseIdentifier = @"Cell";
         if (self.ItemSelectType == ItemSelectTypeTwo) {
             _imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"liu%zi.jpg", 1 % self.photoCounts]];
         }
-        
         
         FXBlurView *blurView = [[FXBlurView alloc] initWithFrame:_imageView.bounds];
         blurView.blurRadius = 10;

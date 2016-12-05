@@ -28,7 +28,7 @@
 #import "NSObject+Property.h"
 
 #import "ToViewTopButton.h"       
-
+#import "ComTableViewDelegate.h"
 
 #define color(r,g,b,al) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:al]
 #define kDefaultViewBackgroundColor [UIColor hexStringToColor:@"#f3f3f0"]
