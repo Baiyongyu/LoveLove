@@ -7,9 +7,9 @@
 //
 
 #import "MemeoryTimeTableViewController.h"
-#import "WaterLayoutViewController.h"
-#import "MyLoveViewController.h"
 
+//#import "WaterLayoutViewController.h"
+#import "PersonCenterViewController.h"
 @interface MemeoryTimeTableViewController () <BaseTableViewControllerDelegate>
 
 @end
@@ -34,11 +34,12 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
-    headerView.backgroundColor = [UIColor whiteColor];
+    headerView.backgroundColor = [UIColor clearColor];
     
-    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - 80)/2, 10, SCREEN_WIDTH - 80, headerView.height)];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - 80)/2, 15, SCREEN_WIDTH - 80, headerView.height)];
     imgView.image = [UIImage imageNamed:@"guide_male_title"];
     imgView.center = CGPointMake(SCREEN_WIDTH/2, 28);
+    imgView.contentMode = UIViewContentModeScaleToFill;
     [headerView addSubview:imgView];
     
     return headerView;
@@ -62,16 +63,29 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 55;
+    return 60;
 }
-
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    WaterLayoutViewController *waterVC = [[WaterLayoutViewController alloc] init];
-    [self.navigationController pushViewController:waterVC animated:YES];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    PersonCenterViewController *personVC = [[PersonCenterViewController alloc] init];
+    personVC.scores = @[@(4.6),@(4.7),@(4.5),@(4.8),@(4.8)];
+    [kRootNavigation pushViewController:personVC animated:YES];
 }
+
+#pragma mark - 取消heightForHeaderInSection 悬浮
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    CGFloat sectionHeaderHeight = 60;
+    if (scrollView.contentOffset.y <= sectionHeaderHeight && scrollView.contentOffset.y >= 0) {
+        scrollView.contentInset = UIEdgeInsetsMake(- scrollView.contentOffset.y, 0, 0, 0);
+    } else if (scrollView.contentOffset.y >= sectionHeaderHeight) {
+        scrollView.contentInset = UIEdgeInsetsMake(- sectionHeaderHeight, 0, 0, 0);
+    }
+}
+
 
 @end
 
@@ -86,10 +100,12 @@
 @property(nonatomic,strong)UIImageView *lineImageView;
 //圆球
 @property(nonatomic,strong)UIImageView *roundImageView;
-//活动名称
+//名称
 @property(nonatomic,strong)UILabel *activityNameLabel;
 //详细信息
 @property(nonatomic,strong)UILabel *detailInfoLabel;
+//图片
+@property(nonatomic,strong)UIImageView *photo;
 @end
 
 @implementation MemoryTimeCell
@@ -105,6 +121,7 @@
         [self.contentView addSubview:self.bgView];
         [self.bgView addSubview:self.activityNameLabel];
         [self.bgView addSubview:self.detailInfoLabel];
+        [self.bgView addSubview:self.photo];
         [self layoutConstraints];
     }
     return self;
@@ -153,9 +170,16 @@
         make.height.mas_greaterThanOrEqualTo(20);
     }];
     
-    [self.detailInfoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.photo mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(weakSelf.activityNameLabel.mas_bottom).offset(5);
         make.left.mas_equalTo(weakSelf.bgView).offset(21);
-        make.right.equalTo(weakSelf.bgView).offset(-15);
+        make.width.mas_equalTo(60);
+        make.height.mas_equalTo(60);
+    }];
+    
+    [self.detailInfoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(weakSelf.photo.mas_right).offset(10);
+        make.right.equalTo(weakSelf.bgView).offset(-10);
         make.top.mas_equalTo(weakSelf.activityNameLabel.mas_bottom).offset(5);
         make.height.mas_greaterThanOrEqualTo(20);
     }];
@@ -168,18 +192,21 @@
     self.timeLabel.text = _happyData.time;
     self.activityNameLabel.text = _happyData.titleName;
     self.detailInfoLabel.text = _happyData.detailInfo;
+    [self.photo sd_setImageWithURL:[NSURL URLWithString:_happyData.imgUrl] placeholderImage:[UIImage imageNamed:@"placeholder"]];
 }
 
 - (void)setIndex:(NSInteger)index {
     _index = index;
     self.numberLabel.text = [NSString stringWithFormat:@"%ld",index+1];
     UIColor *color;
-    if (index%3==0) {
-        color = [UIColor hexStringToColor:@"#0078bb"];
-    } else if (index%3==1) {
-        color = [UIColor hexStringToColor:@"#46bbd5"];
-    } else if (index%3==2) {
+    if (index%4==0) {
+        color = [UIColor hexStringToColor:@"#FDD530"];
+    } else if (index%4==1) {
         color = [UIColor hexStringToColor:@"#ee6f89"];
+    } else if (index%4==2) {
+        color = [UIColor hexStringToColor:@"#0078bb"];
+    } else if (index%4==3) {
+        color = [UIColor hexStringToColor:@"#46bbd5"];
     }
     self.numberLabel.backgroundColor = color;
     self.roundImageView.backgroundColor = color;
@@ -240,11 +267,22 @@
     return _activityNameLabel;
 }
 
+- (UIImageView *)photo {
+    if (!_photo) {
+        _photo = [[UIImageView alloc] init];
+        _photo.layer.masksToBounds = YES;
+        _photo.contentMode = UIViewContentModeScaleToFill;
+        _photo.userInteractionEnabled = YES;
+    }
+    return _photo;
+}
+
 - (UILabel *)detailInfoLabel {
     if (!_detailInfoLabel) {
         _detailInfoLabel = [[UILabel alloc] init];
         _detailInfoLabel.font = XiHeiFont(16);
-        _detailInfoLabel.numberOfLines = 0;
+        _detailInfoLabel.textColor = kDarkGrayColor;
+        _detailInfoLabel.numberOfLines = 3;
         _detailInfoLabel.userInteractionEnabled = YES;
     }
     return _detailInfoLabel;

@@ -16,6 +16,8 @@
 @property(nonatomic,copy)NSString *titleName;
 // 详情
 @property(nonatomic,copy)NSString *detailInfo;
+// 图片
+@property(nonatomic,copy)NSString *imgUrl;
 // 图片视频数组
 @property(nonatomic,copy)NSArray *pictureArray;
 // 内容高度

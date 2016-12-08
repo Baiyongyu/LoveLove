@@ -1,12 +1,12 @@
 //
-//  HomeHeaderView.m
+//  HomeHeaderCardView.m
 //  LoveLove
 //
-//  Created by 宇玄丶 on 2016/11/28.
-//  Copyright © 2016年 宇玄丶. All rights reserved.
+//  Created by 宇玄丶 on 2016/11/26.
+//  Copyright © 2016年 北京116科技有限公司. All rights reserved.
 //
 
-#import "HomeHeaderView.h"
+#import "HomeHeaderCardView.h"
 #import "FXBlurView.h"
 #import "AlbumCollectionViewCell.h"
 #import "AlbumCollectionViewLineLayout.h"
@@ -15,7 +15,7 @@
 
 static NSString *reuseIdentifier = @"Cell";
 static NSString *headerViewIdentifier = @"hederview";
-@interface HomeHeaderView () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface HomeHeaderCardView () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UICollectionView *collectionView;
@@ -23,7 +23,7 @@ static NSString *headerViewIdentifier = @"hederview";
 
 @end
 
-@implementation HomeHeaderView
+@implementation HomeHeaderCardView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -105,9 +105,10 @@ static NSString *headerViewIdentifier = @"hederview";
     return _collectionView;
 }
 
+
 - (UIImageView *)imageView {
     if (!_imageView) {
-        _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
+        _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 300)];
         
         _imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"xiamo%zi.jpg", 2 % 20]];
         FXBlurView *blurView = [[FXBlurView alloc] initWithFrame:_imageView.bounds];

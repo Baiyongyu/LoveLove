@@ -16,6 +16,7 @@
     newItem.time = self.time;
     newItem.titleName = self.titleName;
     newItem.detailInfo = self.detailInfo;
+    newItem.imgUrl = [self.imgUrl copy];
     newItem.pictureArray = [self.pictureArray copy];
     newItem.contentHeight = self.contentHeight;
     return newItem;

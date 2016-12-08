@@ -140,7 +140,8 @@
         _pictureView = ({
 //            UIImageView * picture = [[UIImageView alloc]initWithFrame:CGRectMake(0, -cellHeight/2, SCREEN_WIDTH, cellHeight * 2)];
             UIImageView *picture = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, cellHeight)];
-            picture.contentMode = UIViewContentModeScaleAspectFill;
+            picture.contentMode = UIViewContentModeScaleAspectFit;
+            picture.layer.masksToBounds = YES;
             picture;
         });
         [self.contentView addSubview:_pictureView];
