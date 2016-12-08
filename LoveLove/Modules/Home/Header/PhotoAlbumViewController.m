@@ -9,9 +9,7 @@
 #import "PhotoAlbumViewController.h"
 
 #import "FXBlurView.h"
-#import "AlbumCollectionViewCell.h"
 #import "AlbumCollectionViewLineLayout.h"
-
 #import "MyLoveViewController.h"
 
 static NSString *reuseIdentifier = @"Cell";
@@ -137,3 +135,34 @@ static NSString *reuseIdentifier = @"Cell";
 }
 
 @end
+
+
+@implementation AlbumCollectionViewCell
+
+#pragma mark -
+#pragma mark init methods
+- (UIImageView *)imageView {
+    if (!_imageView) {
+        _imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    }
+    return _imageView;
+}
+
+#pragma mark lifecycle
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self.contentView addSubview:self.imageView];
+    }
+    return self;
+}
+
+- (void)setAppModel:(AppModel *)appModel {
+    _appModel = appModel;
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:appModel.image] placeholderImage:[UIImage imageNamed:@"placeholder"]];
+}
+
+
+@end
+
+

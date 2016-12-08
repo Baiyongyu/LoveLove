@@ -6,8 +6,9 @@
 //  Copyright © 2016年 北京116科技有限公司. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "ComBaseViewController.h"
-
+#import "AppModel.h"
 // 判断点击了那个item
 typedef NS_ENUM(NSInteger , ItemSelectType) {
     ItemSelectTypeOne = 0,
@@ -26,3 +27,12 @@ typedef NS_ENUM(NSInteger , ItemSelectType) {
 /** 从哪个页面到这个界面 */
 - (instancetype)initWithItemSelectType:(ItemSelectType)itemSelectType;
 @end
+
+
+@interface AlbumCollectionViewCell : UICollectionViewCell
+
+@property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) AppModel *appModel;
+
+@end
+

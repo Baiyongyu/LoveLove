@@ -166,14 +166,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    /*
     VideoModel *model = [self.dataSource objectAtIndex:indexPath.row];
     DetailViewController *detailVC = [[DetailViewController alloc]init];
     detailVC.URLString = model.m3u8_url;
     detailVC.title = model.title;
     //    detailVC.URLString = model.mp4_url;
     [self.navigationController pushViewController:detailVC animated:YES];
-     */
 }
 
 #pragma mark scrollView delegate

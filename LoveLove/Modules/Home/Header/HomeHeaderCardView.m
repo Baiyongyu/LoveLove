@@ -8,7 +8,6 @@
 
 #import "HomeHeaderCardView.h"
 #import "FXBlurView.h"
-#import "AlbumCollectionViewCell.h"
 #import "AlbumCollectionViewLineLayout.h"
 #import "PhotoAlbumViewController.h"
 

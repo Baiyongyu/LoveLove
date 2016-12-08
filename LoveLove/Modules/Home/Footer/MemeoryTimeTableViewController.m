@@ -34,7 +34,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
-    headerView.backgroundColor = [UIColor clearColor];
+    headerView.backgroundColor = kDefaultViewBackgroundColor;
     
     UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - 80)/2, 15, SCREEN_WIDTH - 80, headerView.height)];
     imgView.image = [UIImage imageNamed:@"guide_male_title"];
@@ -77,15 +77,14 @@
 }
 
 #pragma mark - 取消heightForHeaderInSection 悬浮
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    CGFloat sectionHeaderHeight = 60;
-    if (scrollView.contentOffset.y <= sectionHeaderHeight && scrollView.contentOffset.y >= 0) {
-        scrollView.contentInset = UIEdgeInsetsMake(- scrollView.contentOffset.y, 0, 0, 0);
-    } else if (scrollView.contentOffset.y >= sectionHeaderHeight) {
-        scrollView.contentInset = UIEdgeInsetsMake(- sectionHeaderHeight, 0, 0, 0);
-    }
-}
-
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//    CGFloat sectionHeaderHeight = 60;
+//    if (scrollView.contentOffset.y <= sectionHeaderHeight && scrollView.contentOffset.y >= 0) {
+//        scrollView.contentInset = UIEdgeInsetsMake(- scrollView.contentOffset.y, 0, 0, 0);
+//    } else if (scrollView.contentOffset.y >= sectionHeaderHeight) {
+//        scrollView.contentInset = UIEdgeInsetsMake(- sectionHeaderHeight, 0, 0, 0);
+//    }
+//}
 
 @end
 
